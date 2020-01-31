@@ -15,6 +15,13 @@ from sklearn.metrics import precision_recall_fscore_support
 from sklearn.metrics import classification_report
 ```
 
+```python
+import numpy as np
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import precision_score, recall_score, f1_score, fbeta_score
+from sklearn.metrics import precision_recall_fscore_support, classification_report
+```
+
 ### 正确率
 
 这个属于最简单的性能衡量指标，思想也非常简单，直接比较预测值和真实值的内容是否相同，实例如下：
