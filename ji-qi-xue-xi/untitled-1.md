@@ -23,13 +23,30 @@ y_hat  = np.array([1, 0, 1, 1, 1, 1])
 这个属于最简单的性能衡量指标，思想也非常简单，直接比较预测值和真实值的内容是否相同，实例如下：
 
 ```python
-# 总共6个样本，
-print(accuracy_score(y_true, y_hat)) # 0.5
+# 总共6个样本，3个正确，3个错误
+print(accuracy_score(y_true, y_hat)) # 0.5错误
 ```
 
+下面的指标需要用到几个参数，这几个词汇怎么理解呢，首先true和false表示的是真实情况与预测情况是否一致，比如说真实
+
+> tp : true positive  
+> fp : false positive  
+> tn : true negtive  
+> fn : false negtive
 
 
 
+### 准确率
+
+计算公式如下：
+
+$$
+precision = \frac{tp}{tp + fp}
+$$
+
+tp和fp
+
+其中tp表示的是正例的正确数量，fp表示的是负例的错误数量
 
 
 
