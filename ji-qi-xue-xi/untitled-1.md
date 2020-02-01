@@ -23,7 +23,8 @@ y_hat  = np.array([1, 0, 1, 1, 1, 1])
 这个属于最简单的性能衡量指标，思想也非常简单，直接比较预测值和真实值的内容是否相同，实例如下：
 
 ```python
-print
+# 总共6个样本，
+print(accuracy_score(y_true, y_hat)) # 0.5
 ```
 
 
