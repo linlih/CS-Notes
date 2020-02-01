@@ -27,7 +27,7 @@ y_hat  = np.array([1, 0, 1, 1, 1, 1])
 print(accuracy_score(y_true, y_hat)) # 0.5错误
 ```
 
-下面的指标需要用到几个参数，这几个词汇怎么理解呢，首先true和false表示的是真实情况与预测情况是否一致，比如说真实
+下面的指标需要用到几个参数，这几个词汇怎么理解呢，首先true和false表示的是真实情况与预测情况是否一致，比如说真实值为1，预测值为1，那么true就为1。positive和negtive指的是预测的结果，为正例则为1，负例为0.
 
 > tp : true positive  
 > fp : false positive  
