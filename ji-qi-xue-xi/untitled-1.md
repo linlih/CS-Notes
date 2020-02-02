@@ -61,11 +61,29 @@ $$
 print(recall_score(y_true, y_hat)) # 3 / (1 + 3) = 0.75
 ```
 
+### F1 score
 
+计算公式如下：
 
+$$
+F1 = 2 * \frac{precision * recall}{precision + recall}
+$$
 
+```python
+print(f1_score(y_true, y_hat)) # (3/5) * (3/4) / (3/5 + 3/4) = 0.6666666
+```
 
+### F-beta score
 
+该指标和`F1 score`一样都是`precision`和`recall`两个参数的加权平均数，`F1 score`是`F-beta score`中`beta`等于1的特殊情况。
+
+计算公式如下：
+
+$$
+F_\beta = \frac{(1 + \beta^2)*precision*recall}{(\beta^2*precision) + recall}
+$$
+
+ 从公式上我们也可以看出，当 $$\beta$$ 等于0时，$$F_\beta$$的值就是`precision`，当$$\beta$$趋向无穷大的时候，$$F_\beta$$的值就是`recall`。
 
 
 
