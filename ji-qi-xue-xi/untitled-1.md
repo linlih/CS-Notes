@@ -70,7 +70,8 @@ F1 = 2 * \frac{precision * recall}{precision + recall}
 $$
 
 ```python
-print(f1_score(y_true, y_hat)) # (3/5) * (3/4) / (3/5 + 3/4) = 0.6666666
+print(f1_score(y_true, y_hat)) 
+# (3/5) * (3/4) / (3/5 + 3/4) = 0.6666666
 ```
 
 ### F-beta score
