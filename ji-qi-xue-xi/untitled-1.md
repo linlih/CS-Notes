@@ -75,7 +75,7 @@ print(f1_score(y_true, y_hat)) # (3/5) * (3/4) / (3/5 + 3/4) = 0.6666666
 
 ### F-beta score
 
-该指标和`F1 score`一样都是`precision`和`recall`两个参数的加权平均数，`F1 score`是`F-beta score`中`beta`等于1的特殊情况。
+该指标和`F1 score`一样都是`precision`和`recall`两个参数的加权调和平均数，`F1 score`是`F-beta score`中`beta`等于1的特殊情况。
 
 计算公式如下：
 
@@ -84,6 +84,16 @@ F_\beta = \frac{(1 + \beta^2)*precision*recall}{(\beta^2*precision) + recall}
 $$
 
  从公式上我们也可以看出，当 $$\beta$$ 等于0时，$$F_\beta$$的值就是`precision`，当$$\beta$$趋向无穷大的时候，$$F_\beta$$的值就是`recall`。
+
+补充F1 score和F-beta score二者调和平均定义的书写方式：
+
+$$
+\begin{aligned}
+\frac{1}{F1} &= \frac{1}{2}*(\frac{1}{precision} + \frac{1}{recall})
+\\
+\frac{1}{F_\beta} &= \frac{1}{1+\beta^2} * (\frac{1}{precision } + \frac{\beta^2}{recall})
+\end{aligned}
+$$
 
 ```python
 print('F-beta: ')
