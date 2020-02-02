@@ -27,14 +27,12 @@ y_hat  = np.array([1, 0, 1, 1, 1, 1])
 print(accuracy_score(y_true, y_hat)) # 0.5错误
 ```
 
-下面的指标需要用到几个参数，这几个词汇怎么理解呢，首先true和false表示的是真实情况与预测情况是否一致，比如说真实值为1，预测值为1，那么true就为1。positive和negtive指的是预测的结果，为正例则为1，负例为0.
+下面的指标需要用到几个参数，这几个词汇怎么理解呢，首先true和false表示的是真实情况与预测情况是否一致，比如说真实值为1，预测值为1，那么true就为1。positive和negtive指的是预测的结果，为正例则为1，负例为0。
 
-> tp : true positive  
-> fp : false positive  
-> tn : true negtive  
-> fn : false negtive
-
-
+> tp : true positive，表示预测结果为正例的正确数量  
+> fp : false positive，表示预测结果为正例的错误数量  
+> tn : true negtive，表示预测结果为负例的正确数量  
+> fn : false negtive，表示预测结果为负例的错误数量
 
 ### 准确率
 
@@ -44,11 +42,24 @@ $$
 precision = \frac{tp}{tp + fp}
 $$
 
-tp和fp
+```python
+# 预测结果为正例的样本数共有5个，正确的数量有3个，即tp = 3, fp = 2
+print(precision_score(y_true, y_hat)) # 3 / ( 3 + 2) = 0.6
+```
 
-其中tp表示的是正例的正确数量，fp表示的是负例的错误数量
+### 召回率
 
+计算公式如下：
 
+$$
+recall = \frac{tp}{tp + fn}
+$$
+
+```python
+# tp为预测结果为正例的正确数量，为3个
+# fn为预测结果为负例的错误数量，为1个
+print(recall_score(y_true, y_hat)) # 3 / (1 + 3) = 0.75
+```
 
 
 
