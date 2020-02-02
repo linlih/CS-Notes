@@ -85,5 +85,24 @@ $$
 
  从公式上我们也可以看出，当 $$\beta$$ 等于0时，$$F_\beta$$的值就是`precision`，当$$\beta$$趋向无穷大的时候，$$F_\beta$$的值就是`recall`。
 
+```python
+print('F-beta: ')
+for beta in np.logspace(-3, 3, num=7, base=10):
+  fbeta = fbeta_score(y_true, y_hat, beta=beta)
+  print('\tbeta=%9.3f\tF-beta=%.5f' % (beta, fbeta))
+
+# 输出结果如下：precision = 0.6, recall = 0.75
+'''
+F-beta: 
+	beta=    0.001	F-beta=0.60000
+	beta=    0.010	F-beta=0.60001
+	beta=    0.100	F-beta=0.60119
+	beta=    1.000	F-beta=0.66667
+	beta=   10.000	F-beta=0.74815
+	beta=  100.000	F-beta=0.74998
+	beta= 1000.000	F-beta=0.75000
+'''
+```
+
 
 
