@@ -34,7 +34,9 @@ print(accuracy_score(y_true, y_hat)) # 0.5错误
 > tn : true negtive，表示预测结果为负例的正确数量  
 > fn : false negtive，表示预测结果为负例的错误数量
 
-### 准确率
+### 查准率
+
+查准
 
 计算公式如下：
 
@@ -47,7 +49,7 @@ $$
 print(precision_score(y_true, y_hat)) # 3 / ( 3 + 2) = 0.6
 ```
 
-### 召回率
+### 查全率
 
 计算公式如下：
 
