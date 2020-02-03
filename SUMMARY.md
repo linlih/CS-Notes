@@ -5,5 +5,5 @@
 ## 机器学习
 
 * [机器学习中的分类指标](ji-qi-xue-xi/ji-qi-xue-xi.md)
-* [Untitled](ji-qi-xue-xi/untitled.md)
+* [SVM](ji-qi-xue-xi/untitled.md)
 
