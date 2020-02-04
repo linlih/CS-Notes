@@ -4,7 +4,9 @@
 
 ## 机器学习
 
-{% page-ref page="./" %}
+{% page-ref page="ji-qi-xue-xi/ji-qi-xue-xi.md" %}
+
+
 
 
 
