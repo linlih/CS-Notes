@@ -115,7 +115,9 @@ $$
 特征$$A_1$$的基尼指数为：
 
 $$
-Gini(D, A_1=1)=\frac{5}{15}\bigg(2×\frac{2}{5}\times\bigg(1-\frac{2}{5}\bigg)\bigg)+\frac{10}{15}\bigg(2×\frac{7}{10}\times\bigg(1-\frac{7}{10}\bigg)\bigg) = 0.44
+Gini(D, A_1=1)=\frac{5}{15}\bigg(2×\frac{2}{5}\times\bigg(1-\frac{2}{5}\bigg)\bigg)+\frac{10}{15}\bigg(2×\frac{7}{10}\times\bigg(1-\frac{7}{10}\bigg)\bigg) = 0.44\\
+Gini(D, A_2=1)=\frac{5}{15}\bigg(2×\frac{3}{5}\times\bigg(1-\frac{3}{5}\bigg)\bigg)+\frac{10}{15}\bigg(2×\frac{6}{10}\times\bigg(1-\frac{6}{10}\bigg)\bigg) = 0.48\\
+Gini(D, A_3=1)=\frac{5}{15}\bigg(2×\frac{4}{5}\times\bigg(1-\frac{4}{5}\bigg)\bigg)+\frac{10}{15}\bigg(2×\frac{5}{10}\times\bigg(1-\frac{5}{10}\bigg)\bigg) = 0.44
 $$
 
 Q: 既然一颗树的根和叶子节点都是确定的，那么为什么还会有随机森林呢？
