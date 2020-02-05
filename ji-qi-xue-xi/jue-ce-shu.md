@@ -85,7 +85,7 @@ Iterative Dichotomiser，该算法使用的是
 
 #### CART
 
-gini系数的一种理解方式可以结合方差来考虑，Gini的定义如下：
+gini系数的一种理解方式可以结合方差来考虑，假设有$$K$$个类，样本点属于第$$k$$类的概率为$$p_k$$,Gini的定义如下:
 
 $$
 Gini(p) = \sum^K_{k=1}p_k(1-p_k)=1-\sum^K_{k=1}p_k^2
