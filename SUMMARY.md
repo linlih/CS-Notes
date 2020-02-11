@@ -12,4 +12,5 @@
 ## 语言、算法相关
 
 * [STL容器](yu-yan-suan-fa-xiang-guan/untitled.md)
+* [STL 常用算法](yu-yan-suan-fa-xiang-guan/stl-chang-yong-suan-fa.md)
 
