@@ -7,4 +7,9 @@
 * [机器学习中的分类指标](ji-qi-xue-xi/ji-qi-xue-xi.md)
 * [SVM](ji-qi-xue-xi/svm.md)
 * [决策树](ji-qi-xue-xi/jue-ce-shu.md)
+* [ML问题总结](ji-qi-xue-xi/ml-wen-ti-zong-jie.md)
+
+## 语言、算法相关
+
+* [Untitled](yu-yan-suan-fa-xiang-guan/untitled.md)
 
