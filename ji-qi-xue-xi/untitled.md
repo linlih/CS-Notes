@@ -5,7 +5,8 @@
 $$
 \begin{align} 
 min&\ f(x) \\
-s.t.
+s.t.&\  h(x) = 0 \\
+      &\ g(x) \leq 0
 \end{align}
 $$
 
