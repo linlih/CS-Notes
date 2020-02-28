@@ -8,6 +8,7 @@
 * [SVM](ji-qi-xue-xi/svm.md)
 * [线性模型](ji-qi-xue-xi/xian-xing-mo-xing.md)
 * [拉格朗日乘子法和KKT条件](ji-qi-xue-xi/untitled.md)
+* [集成学习](ji-qi-xue-xi/ji-cheng-xue-xi.md)
 * [贝叶斯分类器](ji-qi-xue-xi/bei-ye-si-fen-lei-qi.md)
 * [决策树](ji-qi-xue-xi/jue-ce-shu.md)
 * [神经网络](ji-qi-xue-xi/shen-jing-wang-luo.md)
