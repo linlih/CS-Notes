@@ -1,4 +1,3 @@
-![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 # 拉格朗日乘子法和KKT条件
 
 拉格朗日乘子法用于有条件的优化，具体的优化的场景如下：
