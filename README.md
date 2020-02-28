@@ -6,7 +6,7 @@
 
 {% page-ref page="ji-qi-xue-xi/ji-qi-xue-xi.md" %}
 
-{% page-ref page="ji-qi-xue-xi/svm.md" %}
+{% page-ref page="ji-qi-xue-xi/support-vector-machine.md" %}
 
 {% page-ref page="ji-qi-xue-xi/jue-ce-shu.md" %}
 
