@@ -1,4 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
 # 拉格朗日乘子法和KKT条件
 
 拉格朗日乘子法用于有条件的优化，具体的优化的场景如下：
