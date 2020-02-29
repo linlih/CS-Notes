@@ -10,6 +10,7 @@
 * [拉格朗日乘子法和KKT条件](ji-qi-xue-xi/lagrange-kkt.md)
 * [集成学习](ji-qi-xue-xi/ji-cheng-xue-xi.md)
 * [贝叶斯分类器](ji-qi-xue-xi/bei-ye-si-fen-lei-qi.md)
+* [降维和度量学习](ji-qi-xue-xi/jiang-wei-he-du-liang-xue-xi.md)
 * [决策树](ji-qi-xue-xi/jue-ce-shu.md)
 * [神经网络](ji-qi-xue-xi/shen-jing-wang-luo.md)
 * [EM算法](ji-qi-xue-xi/em-suan-fa.md)
