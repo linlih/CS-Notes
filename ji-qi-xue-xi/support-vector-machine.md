@@ -132,6 +132,15 @@ $$
 
 ![](../.gitbook/assets/image%20%283%29.png)
 
+然后我们按照固定的两个参数写出有优化的式子：
+
+$$
+W(\alpha_1, \alpha_2) = \alpha_1 +\alpha_2-\frac{1}{2}K_{1,1}y_1^2\alpha_1^2-\frac{1} \\ 
+{2}K_{2,2}y_2^2\alpha_1^2 -  K_{1,2}y_1y_2\alpha_1\alpha_2-y_1\alpha_1\sum_{i=3}^N\alpha_iy_iK_{i,1} - y_2\alpha_2\sum_{i=3}^N\alpha_iy_iK_{i,2} + C
+$$
+
+
+
 
 
 
