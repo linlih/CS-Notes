@@ -132,16 +132,26 @@ $$
 
 ![](../.gitbook/assets/image%20%283%29.png)
 
-然后我们按照固定的两个参数写出有优化的式子：
+然后我们按照固定的两个参数写出有优化的式子，将其他与$$\alpha_1，\alpha_2$$无关的常数项写成C：
 
 $$
-W(\alpha_1, \alpha_2) = \alpha_1 +\alpha_2-\frac{1}{2}K_{1,1}y_1^2\alpha_1^2-\frac{1} \\ 
-{2}K_{2,2}y_2^2\alpha_1^2 -  K_{1,2}y_1y_2\alpha_1\alpha_2-y_1\alpha_1\sum_{i=3}^N\alpha_iy_iK_{i,1} - y_2\alpha_2\sum_{i=3}^N\alpha_iy_iK_{i,2} + C
+\begin{aligned} W(\alpha_1, \alpha_2) &= \alpha_1 +\alpha_2-\frac{1}{2}K_{1,1}y_1^2\alpha_1^2-\frac{1} 
+{2}K_{2,2}y_2^2\alpha_1^ -  K_{1,2}y_1y_2\alpha_1\alpha_2 \\&-y_1\alpha_1\sum_{i=3}^N\alpha_iy_iK_{i,1} - y_2\alpha_2\sum_{i=3}^N\alpha_iy_iK_{i,2} + C\end{aligned}
 $$
 
+于是得到一个二元函数的优化。然后继续化简，由$$y_iy_i = 1$$，不管是正例负例二者相乘的结果为1，那么这个时候我们可以根据上面推到的式子中共两边同时乘以$$y_2$$得到：
 
+$$
+\alpha_1y_1y_2 + \alpha_2y_2y_2 = \gamma y_2 \\
+\alpha_2=\gamma y_2 - \alpha_1y_1y_2
+$$
 
+带入$$\alpha_2$$ 的表达式，最终的得到：
 
+$$
+\begin{aligned} W(\alpha_1, \alpha_2) &= \alpha_1 +\gamma y_2 - \alpha_1y_1y_2 -\frac{1}{2}K_{1,1}y_1^2\alpha_1^2-\frac{1} 
+{2}K_{2,2}y_2^2\alpha_1^ -  K_{1,2}y_1y_2\alpha_1\alpha_2 \\&-y_1\alpha_1\sum_{i=3}^N\alpha_iy_iK_{i,1} - y_2\alpha_2\sum_{i=3}^N\alpha_iy_iK_{i,2} + C\end{aligned}
+$$
 
 
 
