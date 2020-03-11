@@ -226,6 +226,30 @@ $$
 
 同样的根据右图的内容，此时$$y_1= y_2$$，此时的限制条件就可以写成$$\alpha_1+\alpha_2=k$$:
 
+下界：$$L=max(0, \alpha_2^{old}+\alpha_1^{old}-C)$$
+
+上界：$$H=max(C, \alpha_2^{old}+\alpha_1^{old})$$
+
+根据上面的上下界可以得到：
+
+$$
+\alpha_{2}^{n e w}=\left\{\begin{array}{ll}
+H & \alpha_{2}^{\text {new,unclipped}}>H \\
+\alpha_{2}^{\text {new,unclipped}} & L \leq \alpha_{2}^{\text {new, unclipped}} \leq H \\
+L & \alpha_{2}^{\text {new,unclipped}}<L
+\end{array}\right.
+$$
+
+然后根据$$\alpha_1^{old}y_1+\alpha_2^{old}y_2=\alpha_1^{new}y_1+\alpha_2^{new}y_2$$得到：
+
+$$
+\alpha_1^{new}=\alpha_1^{old}+y_1y_2(\alpha_2^{old}-\alpha_2^{new})
+$$
+
+到这里我们就可以选取一对$$\alpha_i, \alpha_j$$进行优化更新了。
+
+
+
 
 
 ### 参考文献
