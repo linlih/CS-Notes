@@ -135,7 +135,10 @@ $$
 然后我们按照固定的两个参数写出有优化的式子，将其他与$$\alpha_1，\alpha_2$$无关的常数项写成C：
 
 $$
-\begin{aligned} W(\alpha_1, \alpha_2) &= \alpha_1 +\alpha_2-\frac{1}{2}K_{1,1}y_1^2\alpha_1^2-\frac{1} 
+\begin{aligned} 
+W(\alpha) &= \sum_{i=1}^N\alpha_i - \frac{1}{2}\sum_{i=1}^N\sum_{j=1}^Ny_iy_j\alpha_i\alpha_j\langle x_i, x_j\rangle \\
+\\
+W(\alpha_1, \alpha_2) &= \alpha_1 +\alpha_2-\frac{1}{2}K_{1,1}y_1^2\alpha_1^2-\frac{1} 
 {2}K_{2,2}y_2^2\alpha_2^ 2-  K_{1,2}y_1y_2\alpha_1\alpha_2 \\&-y_1\alpha_1\sum_{i=3}^N\alpha_iy_iK_{i,1} - y_2\alpha_2\sum_{i=3}^N\alpha_iy_iK_{i,2} + C\end{aligned}
 $$
 
