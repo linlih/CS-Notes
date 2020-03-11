@@ -135,11 +135,11 @@ $$
 然后我们按照固定的两个参数写出有优化的式子，将其他与$$\alpha_1，\alpha_2$$无关的常数项写成C：
 
 $$
-\begin{aligned} 
-W(\alpha) &= \sum_{i=1}^N\alpha_i - \frac{1}{2}\sum_{i=1}^N\sum_{j=1}^Ny_iy_j\alpha_i\alpha_j\langle x_i, x_j\rangle \\
-\\
-W(\alpha_1, \alpha_2) &= \alpha_1 +\alpha_2-\frac{1}{2}K_{1,1}y_1^2\alpha_1^2-\frac{1} 
-{2}K_{2,2}y_2^2\alpha_2^ 2-  K_{1,2}y_1y_2\alpha_1\alpha_2 \\&-y_1\alpha_1\sum_{i=3}^N\alpha_iy_iK_{i,1} - y_2\alpha_2\sum_{i=3}^N\alpha_iy_iK_{i,2} + C\end{aligned}
+W(\alpha )\ =\sum ^{N}_{i=1} \alpha _{i} -\frac{1}{2}\sum ^{N}_{i=1}\sum ^{N}_{j=1} y_{i} y_{j} \alpha _{i} \alpha _{j} \langle x_{i} ,x_{j} \rangle \\
+W(\alpha _{1} ,\alpha _{2} )=\alpha _{1} +\alpha _{2} -\frac{1}{2} K_{1,1} y^{2}_{1} \alpha ^{2}_{1} -\frac{1}{2} K_{2,2} y^{2}_{2} \alpha ^{2}_{2} -\frac{1}{2} K_{1,2} y_{1} y_{2} \alpha _{1} \alpha _{2} \ -\frac{1}{2} K_{2,1} y_{2} y_{1} \alpha _{2} \alpha _{1}\\
+-y_{1} \alpha _{1}\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{i,1} -y_{2} \alpha _{2}\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{i,2} +C\\
+=\ \alpha _{1} +\alpha _{2} -\frac{1}{2} K_{1,1} y^{2}_{1} \alpha ^{2}_{1} -\frac{1}{2} K_{2,2} y^{2}_{2} \alpha ^{2}_{2} -K_{1,2} y_{1} y_{2} \alpha _{1} \alpha _{2}\\
+-y_{1} \alpha _{1}\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{i,1} -y_{2} \alpha _{2}\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{i,2} +C
 $$
 
 于是得到一个二元函数的优化。然后继续化简，由$$y_iy_i = 1$$，不管是正例负例二者相乘的结果为1，那么这个时候我们可以根据上面推到的式子中共两边同时乘以$$y_2$$得到：
@@ -152,9 +152,44 @@ $$
 带入$$\alpha_2$$ 的表达式，同时，令$$v_1 = \sum_{i=3}^N\alpha_iy_iK_{i,1} , v_2=\sum_{i=3}^N\alpha_iy_iK_{i,2}$$最终的得到：
 
 $$
-\begin{aligned} W(\alpha_2) &= \alpha_1 +\alpha_2-\frac{1}{2}K_{1,1}(\gamma-\alpha_2y_2)^2-\frac{1} 
-{2}K_{2,2}\alpha_2^ 2-  K_{1,2}y_2(\gamma -\alpha_2y_2)\alpha_2 \\&-v_1(\gamma-\alpha_2y_2) - y_2\alpha_2v_2 + C\end{aligned}
+W(\alpha _{1} ,\alpha _{2} )=\ \gamma y_{1} -\alpha _{2} y_{1} y_{2} +\alpha _{2} -\frac{1}{2} K_{1,1} y^{2}_{1}( \gamma y_{1} -\alpha _{2} y_{1} y_{2})^{2} -\frac{1}{2} K_{2,2} y^{2}_{2} \alpha ^{2}_{2} -K_{1,2} y_{1} y_{2}( \gamma y_{1} -\alpha _{2} y_{1} y_{2}) \alpha _{2}\\
+-y_{1}( \gamma y_{1} -\alpha _{2} y_{1} y_{2})\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{i,1} -y_{2} \alpha _{2}\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{i,2} +C\\
+=\gamma y_{1} -\alpha _{2} y_{1} y_{2} +\alpha _{2} -\frac{1}{2} K_{1,1} y^{2}_{1}( \gamma y_{1} -\alpha _{2} y_{1} y_{2})^{2} -\frac{1}{2} K_{2,2} y^{2}_{2} \alpha ^{2}_{2} -K_{1,2} y_{1} y_{2}( \gamma y_{1} -\alpha _{2} y_{1} y_{2}) \alpha _{2}\\
+-y_{1}( \gamma y_{1} -\alpha _{2} y_{1} y_{2}) v_{1} -y_{2} \alpha _{2} v_{2} +C
 $$
+
+然后我们的工作是进行求导：
+
+$$
+\begin{aligned}
+\frac{\partial W(\alpha _{2} )}{\partial \alpha _{2}} & =-y_{1} y_{2} +1-K_{1,1} y^{2}_{1} (\gamma y_{1} -\alpha _{2} y_{1} y_{2} )y_{1} y_{2} -K_{2,2} y^{2}_{2} \alpha _{2} -K_{1,2} y_{1} y_{2} (\gamma y_{1} -\alpha _{2} y_{1} y_{2} )+K_{1,2} y^{2}_{1} y^{2}_{2} \alpha _{2} -y^{2}_{1} y_{2} v_{1} -y_{2} v_{2}\\
+ & (带入y^{2}_{i} =1化简)\\
+ & =-y_{1} y_{2} +1-K_{1,1} \gamma y_{2} -K_{1,1} \gamma \alpha _{2} -K_{2,2} \alpha _{2} -K_{1,2} \gamma y_{2} +K_{1,2} \alpha _{2} +K_{1,2} \alpha _{2} -y_{2} v_{1} -y_{2} v_{2}\\
+ & (合并同类项规范式子)\\
+ & =-(K_{1,1} +K_{2,2} -2K_{1,2} )\alpha _{2} -K_{1,2} \gamma y_{2} -K_{1,1} \gamma y_{2} -y_{2} (v_{1} -v_{2} )-y_{1} y_{2} +1\\
+ & (这里非常重要，把1作为一个等量代换，1=y^{2}_{2})\\
+ & =-(K_{1,1} +K_{2,2} -2K_{1,2} )\alpha _{2} -K_{1,2} \gamma y_{2} -K_{1,1} \gamma y_{2} -y_{2} (v_{1} -v_{2} )-y_{1} y_{2} +y^{2}_{2} = 0
+\end{aligned}
+$$
+
+接下来继续进行化简，我们知道SVM对数据的预测最终要计算的表达是：$$f(x)=\sum\limits_{i=1}^N\alpha _iy_iK(x_i, x)+b$$，所以我们对$$v_1$$和$$v_2$$的值就可以进行一个代换：
+
+$$
+\begin{aligned}
+v_{1} &=\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{1,i} =f( x_{1}) -\alpha _{1} y_{1} K_{1,1} -\alpha _{2} y_{2} K_{1,2} -b\\
+v_{2} &=\sum ^{N}_{i=3} \alpha _{i} y_{i} K_{2,i} =f( x_{2}) -\alpha _{1} y_{1} K_{2,1} -\alpha _{2} y_{2} K_{2,2} -b\\
+v_{1} -v_{2} &=f( x_{1}) -f( x_{2}) -\alpha _{1} y_{1}( K_{1,1} -K_{1,2}) -\alpha _{2} y_{2}( K_{1,2} -K_{2,2})\\
+&( 带入\alpha _{1} =( \gamma -\alpha _{2} y_{2}) y_{1})\\
+&=f( x_{1}) -f( x_{2}) -( \gamma -\alpha _{2} y_{2}) y_{1} y_{1}( K_{1,1} -K_{1,2}) -\alpha _{2} y_{2}( K_{1,2} -K_{2,2})\\
+
+&( 其中y_{1} y_{1} =y^{2}_{1} =1)\\
+&=f( x_{1}) -f( x_{2}) -\gamma ( K_{1,1} -K_{1,2}) +\alpha _{2} y_{2}( K_{1,1} -K_{1,2}) -\alpha _{2} y_{2}( K_{1,2} -K_{2,2})\\
+&( 其中K_{1,2} =K_{2,1})\\
+&=f( x_{1}) -f( x_{2}) -\gamma ( K_{1,1} -K_{1,2}) +\alpha _{2} y_{2}( K_{1,1} +K_{2,2} -2K_{1,2})
+\end{aligned}
+$$
+
+
 
 
 
