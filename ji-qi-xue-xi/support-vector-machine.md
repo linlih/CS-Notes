@@ -189,15 +189,42 @@ v_{1} -v_{2} &=f( x_{1}) -f( x_{2}) -\alpha _{1} y_{1}( K_{1,1} -K_{1,2}) -\alph
 \end{aligned}
 $$
 
+令预测值和真实值的误差为：$$E_i=f(x_i)-y_i$$，$$\eta=K_{1,1}+K_{2,2}-2K_{1,2}$$，同时带入$$v_1-v_2$$，得到：
 
+$$
+\begin{aligned}
+\frac{\partial W(\alpha _{2} )}{\partial \alpha _{2}}& =-\eta \alpha ^{new}_{2} +K_{1,2} \gamma y_{2} -K_{1,1} \gamma y_{2} -y_{2} [f(x_{1} )-f(x_{2} )-\gamma (K_{1,1} -K_{1,2} )+\alpha ^{old}_{2} y_{2} \eta ]-y_{1} y_{2} +y^{2}_{2}\\
+&=-\eta \alpha ^{new}_{2} +K_{1,2} \gamma y_{2} -K_{1,1} \gamma y_{2} -y_{2}[ f(x_{1} )-f(x_{2} )] +y_{2} \gamma (K_{1,1} -K_{1,2} )+\alpha ^{old}_{2} y^{2}_{2} \eta -y_{1} y_{2} +y^{2}_{2}\\
+&=-\eta \alpha ^{new}_{2} +y_{2}[ f(x_{1} )-f(x_{2} )] +\alpha ^{old}_{2} y^{2}_{2} \eta -y_{1} y_{2} +y^{2}_{2}\\
+&=-\eta \alpha ^{new}_{2} +\alpha ^{old}_{2} \eta +y_{2}\left( f(x_{1} )-f(x_{2} )+y_{2} -y_{1}\right)\\
+&=-\eta \alpha ^{new}_{2} +\eta \alpha ^{old}_{2} +y_{2}\left(E_1 - E_2\right) = 0
+\end{aligned}
+$$
 
+然后我们可以得到的是：
 
+$$
+\alpha ^{new}_{2} =\alpha ^{old}_{2} +\frac{y_{2}( E_{1} -E_{2})}{\eta }
+$$
 
+#### 下一步我们要对原始解进行裁剪
 
+为什么需要裁剪呢？是因为我们的计算得到的原始解可能会超出上面的限制条件规定的范围：
 
+$$
+\alpha_1y_1 + \alpha_2y_2 = -\sum_{i=3}^N\alpha_iy_i = \gamma\\
+0\leq\alpha_i \leq C
+$$
 
+![](../.gitbook/assets/image%20%287%29.png)
 
+左图这边，我们可以的看到，此时$$y_1\ne y_2$$，此时的限制条件就可以写成$$\alpha_1-\alpha_2=k$$，根据$$k$$的正负可以得到不同的上下界，因此可以写成：
 
+下界：$$L=max(0, \alpha_2^{old}-\alpha_1^{old})$$
+
+上界：$$H=max(C, C+\alpha_2^{old}-\alpha_1^{old})$$
+
+同样的根据右图的内容，此时$$y_1= y_2$$，此时的限制条件就可以写成$$\alpha_1+\alpha_2=k$$:
 
 
 
