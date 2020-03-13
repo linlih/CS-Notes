@@ -12,5 +12,18 @@ plt.rcParams['axes.unicode_minus']=False # 用来争取显示正负号
 
 ## Numpy总结
 
-np.r_是按列连接两个矩阵，就是把两矩阵上下相加，要求列数相等，类似于pandas中的concat\(\)。 np.c_是按行连接两个矩阵，就是把两矩阵左右相加，要求行数相等，类似于pandas中的merge\(\)。
+np.r是按列连接两个矩阵，就是把两矩阵上下相加，要求列数相等，类似于pandas中的concat\(\)。 np.c是按行连接两个矩阵，就是把两矩阵左右相加，要求行数相等，类似于pandas中的merge\(\)。
+
+### Pandas
+
+使用read\_csv读入文件的时候，访问的方式不同得到的变量的类型不同
+
+```python
+import pandas ad pd
+data = pd.read_csv('train.csv')
+data[['occupation']] # 返回的格式是：pandas.core.series.Series
+data['occupation']   # 返回的格式是：pandas.core.frame.DataFrame
+```
+
+
 
