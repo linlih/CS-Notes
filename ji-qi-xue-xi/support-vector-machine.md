@@ -113,12 +113,24 @@ $$
 将这两个结果带入先前的拉格朗日函数中：
 
 $$
-L(w,b, \alpha)=\frac{1}{2} \left \| w \right \|^2 +\sum_{n=1}^N\alpha _n\{1-y_n(w^Tx_n+b)\}
+\begin{aligned}
+L(w,b,\alpha )&=\frac{1}{2}\Vert w\Vert ^{2} +\sum ^{N}_{n=1} \alpha _{n} \{1-y_{n} (w^{T} x_{n} +b)\}\\
+&=\frac{1}{2}\Vert w\Vert ^{2} +\sum ^{N}_{n=1} \alpha _{n} -\sum ^{N}_{n=1} \alpha _{n} y_{n} w^{T} x_{n} +\sum ^{N}_{n=1} \alpha _{n} y_{n} b\\
+&=\frac{1}{2}\Vert w\Vert ^{2} +\sum ^{N}_{n=1} \alpha _{n} -\sum ^{N}_{n=1} \alpha _{n} y_{n} w^{T} x_{n}\\
+&=\frac{1}{2}\sum ^{N}_{n=1} \alpha _{n} y_{n} x_{n}\sum ^{N}_{m=1} \alpha _{m} y_{n} x_{m} +\sum ^{N}_{n=1} \alpha _{n} -\sum ^{N}_{n=1} \alpha _{n} y_{n}\left(\sum ^{N}_{m=1} \alpha _{m} y_{m} x_{m}\right) x_{n}\\
+&=\frac{1}{2}\sum ^{N}_{n=1}\sum ^{N}_{m=1} \alpha _{n} \alpha _{m} y_{n} y_{n} x_{n} x_{m} +\sum ^{N}_{n=1} \alpha _{n} -\sum ^{N}_{n=1}\sum ^{N}_{m=1} \alpha _{n} \alpha _{m} y_{n} y_{m} x_{n} x_{m}\\
+&=\sum ^{N}_{n=1} \alpha _{n} -\frac{1}{2}\sum ^{N}_{n=1}\sum ^{N}_{m=1} \alpha _{n} \alpha _{m} y_{n} y_{n} x_{n} x_{m}
+\end{aligned}
 $$
 
+其中限制条件为：
 
+$$
+\alpha_n\geq0,\ n=1,...,N\\
+\sum_{n=1}^N\alpha _ny_n=0
+$$
 
-#### 
+那么如何高效地解出这个式子呢？需要用到SMO算法，但是在介绍SMO之前，先来看下线性不可分的数据场景下，SVM要怎么处理。
 
 #### 线性支持向量机
 
@@ -295,6 +307,10 @@ $$
 $$
 
 到这里我们就可以选取一对$$\alpha_i, \alpha_j$$进行优化更新了。
+
+
+
+
 
 
 
