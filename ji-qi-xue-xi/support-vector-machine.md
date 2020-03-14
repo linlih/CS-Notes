@@ -83,14 +83,42 @@ $$
 最终我们得到SVM的目标函数为：
 
 $$
-arg\, {\underset {w}{\operatorname {min} }}\,    \frac{1}{2} \left \| w \right \|^2\\ s.t. \ \  y_n*(w^Tx_n + b) \geq 1 \ \ n=1, ... ...,N
+arg\, {\underset {w}{\operatorname {min} }}\,    \frac{1}{2} \left \| w \right \|^2\\ s.t. \ \  y_n*(w^Tx_n + b) \geq 1, \ \ n=1, ... ...,N
 $$
 
 ## 拉格朗日乘子法和KKT条件
 
 那么现在怎么做呢？带条件的最优化问题，需要用到拉格朗日乘子法。关于拉格朗日乘子法为什么要这么做，参考[这里](lagrange-kkt.md)。
 
-**需要补充KKT条件，对偶函数**
+引入拉格朗日乘子，将优化函数写成：
+
+$$
+L(w,b, \alpha)=\frac{1}{2} \left \| w \right \|^2 +\sum_{n=1}^N\alpha _n\{1-y_n(w^Tx_n+b)\}
+$$
+
+然后对$$w$$和$$b$$分别求偏导得到：
+
+$$
+\frac{\partial L(w, b, \alpha)}{\partial w}=w-\sum_{n=1}^N\alpha _ny_nx_n=0\\
+\frac{\partial L(w, b, \alpha)}{\partial b}=\sum_{n=1}^N\alpha _ny_n=0
+$$
+
+化简一下可以得到：
+
+$$
+w=\sum_{n=1}^N\alpha _ny_nx_n\\
+\sum_{n=1}^N\alpha _ny_n=0
+$$
+
+将这两个结果带入先前的拉格朗日函数中：
+
+$$
+L(w,b, \alpha)=\frac{1}{2} \left \| w \right \|^2 +\sum_{n=1}^N\alpha _n\{1-y_n(w^Tx_n+b)\}
+$$
+
+
+
+#### 
 
 #### 线性支持向量机
 
