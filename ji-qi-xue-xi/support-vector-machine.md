@@ -308,9 +308,35 @@ $$
 
 到这里我们就可以选取一对$$\alpha_i, \alpha_j$$进行优化更新了。
 
+### 更新阈值b
 
+当$$0<\alpha _1 ^{new} < C$$，满足$$y_1(w^T+b)=1$$,此时我们两边同时乘以$$y_1$$可以得到$$\sum \limits ^N _{i=1}\alpha_iy_iK_{i,1}=y_1$$进而可以得到$$b_1^{new}$$的值：
 
+$$
+b_1^{new}=y_1- \sum_{i=1}^N\alpha_iy_iK_{i,1}-\alpha_1^{new}y_1K_{1,1}-\alpha_2^{new}y_2K_{2,1}
+$$
 
+其中上式中的前两项可以写成：
+
+$$
+y_{1}-\sum_{i=3}^{N} \alpha_{i} y_{i} K_{i, 1}=-E_{1}+\alpha_{1}^{\text {old }} y_{1} K_{1,1}+\alpha_{2}^{\text {old }} y_{2} K_{2,1}+b^{\text {old }}
+$$
+
+当$$0<\alpha_2^{new}<C$$，可以得到：
+
+$$
+b_{2}^{\text {new}}=-E_{2}-y_{1} K_{1,2}\left(\alpha_{1}^{\text {new}}-\alpha_{1}^{\text {old}}\right)-y_{2} K_{2,2}\left(\alpha_{2}^{\text {new}}-\alpha_{2}^{\text {old}}\right)+b^{\text {old}}
+$$
+
+当$$b_1$$和$$b_2$$都有效的时候他们是相等的，即$$b^{new}=b_1^{new}=b_2^{new}$$
+
+当$$\alpha_1, \alpha_2$$都在边界上的时候，且$$L\ne H$$时，$$b_1,b_2$$之间的值就是和KKT条件一致的阈值。SMO算法选择他们的中点作为新的阈值：
+
+$$
+b^{new}=\frac{b_1^{new}+b_2^{new}}{2}
+$$
+
+至此，关于SVM所需要的参数我们都可以计算出来了。
 
 
 
