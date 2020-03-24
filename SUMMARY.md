@@ -6,6 +6,7 @@
 
 * [机器学习中的分类指标](ji-qi-xue-xi/ji-qi-xue-xi.md)
 * [数学基础](ji-qi-xue-xi/shu-xue-ji-chu.md)
+* [数据清洗](ji-qi-xue-xi/shu-ju-qing-xi.md)
 * [SVM](ji-qi-xue-xi/support-vector-machine.md)
 * [线性模型](ji-qi-xue-xi/xian-xing-mo-xing.md)
 * [拉格朗日乘子法和KKT条件](ji-qi-xue-xi/lagrange-kkt.md)
@@ -16,10 +17,10 @@
 * [神经网络](ji-qi-xue-xi/shen-jing-wang-luo.md)
 * [EM算法](ji-qi-xue-xi/em-suan-fa.md)
 * [ML问题总结](ji-qi-xue-xi/ml-wen-ti-zong-jie.md)
-* [数据清洗](ji-qi-xue-xi/shu-ju-qing-xi.md)
 
 ## 语言、算法相关
 
 * [STL容器](yu-yan-suan-fa-xiang-guan/untitled.md)
 * [STL 常用算法](yu-yan-suan-fa-xiang-guan/stl-chang-yong-suan-fa.md)
+* [Markdown总结](yu-yan-suan-fa-xiang-guan/markdown-zong-jie.md)
 
