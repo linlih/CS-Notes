@@ -5,6 +5,7 @@
 ## 机器学习
 
 * [机器学习中的分类指标](ji-qi-xue-xi/ji-qi-xue-xi.md)
+* [数学基础](ji-qi-xue-xi/shu-xue-ji-chu.md)
 * [SVM](ji-qi-xue-xi/support-vector-machine.md)
 * [线性模型](ji-qi-xue-xi/xian-xing-mo-xing.md)
 * [拉格朗日乘子法和KKT条件](ji-qi-xue-xi/lagrange-kkt.md)
