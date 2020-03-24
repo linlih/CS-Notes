@@ -16,15 +16,19 @@
 
 ## L1&L2正则
 
-L1正则在统计学的文献中被称之为lasso\([Tibshirani,1996](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf)\)，表现为如果超参数$$\lambda$$充分大，那么某些系数$$w_j$$就会变为零，从而产生一个稀疏模型。产生这样的结果原因是什么呢？
+L1正则在统计学的文献中被称之为lasso（least absolute shrinkage and selection operator最小绝对收缩和选择算子）\([Tibshirani,1996](http://statweb.stanford.edu/~tibs/lasso/lasso.pdf)\)，表现为如果超参数$$\lambda$$充分大，那么某些系数$$w_j$$就会变为零，从而产生一个稀疏模型。产生这样的结果原因是什么呢？
 
-假设现在有一个二维的$$w=(w_1, w_2)$$，蓝色是误差函数的优化，橙色是正则化的限制区域，从右图中可以看到，此时最优解$$w^*$$ 在$$w_2$$轴上，此时的$$w_1 = 0$$，得到一稀疏解。左边的L2正则的限制区域为圆，此时得到的$$w^*$$在两个维度上都不为0
+直观的解释如下：假设现在有一个二维的$$w=(w_1, w_2)$$，蓝色是误差函数的优化，橙色是正则化的限制区域，从右图中可以看到，此时最优解$$w^*$$ 在$$w_2$$轴上，此时的$$w_1 = 0$$，更倾向得到稀疏解。左边的L2正则的限制区域为圆，此时得到的$$w^*$$落在象限内，两个维度上都不为0。
 
 ![](../.gitbook/assets/image%20%2810%29.png)
 
+这里给出了关于L1为什么得到的是稀疏模型的更多[解释1](https://stats.stackexchange.com/questions/45643/why-l1-norm-for-sparse-models)，[解释2](https://www.zhihu.com/question/37096933)，[解释3](https://blog.csdn.net/fantacy10000/article/details/90647686)
 
+总结起来可按照三个方面来分析L1和L2正则：
 
-
+1. 从优化目标函数的表达式进行求导得到梯度的不同进行分析
+2. 从解空间，也就是上图
+3. 从先验分布进行分析，L1相当于引入了拉普拉斯分布，而L2相当于引入了高斯分布
 
 ## 简单的线性回归问题
 
@@ -78,6 +82,7 @@ ok！至此我们就可以根据样本信息，得到了最后的拟合曲线了
 ### 参考文献
 
 * \[1\]谨慎殷勤.怎样区分线性和非线性\_线性与非线性的区别.[CSDN](https://blog.csdn.net/weixin_41797870/article/details/85012811)
+* \[2\]wikipedia.[Lasso \(statistics\)](https://en.wikipedia.org/wiki/Lasso_%28statistics%29).
 
 
 
