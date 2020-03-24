@@ -18,3 +18,15 @@ $$
 f(\sum _{i=1}^m\lambda_ix_i)\leq\sum _{i=1}^m\lambda_if(x_i)
 $$
 
+如果把$$\lambda_i$$看成是取值为$$\{x_i\}$$的离散变量$$x$$的概率分布的话，那么上述的公式可以写成：
+
+$$
+f(\mathbb{E}[x]) \leq \mathbb{E}[f(x)]
+$$
+
+
+
+
+
+
+
