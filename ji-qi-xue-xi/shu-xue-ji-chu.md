@@ -24,7 +24,11 @@ $$
 f(\mathbb{E}[x]) \leq \mathbb{E}[f(x)]
 $$
 
+其中$$\mathbb E[\cdot]$$表示的是期望。对于连续变量，可以写成：
 
+$$
+f(\int \boldsymbol xp( \boldsymbol x))d \boldsymbol x \leq \int f( \boldsymbol x)p( \boldsymbol x)d \boldsymbol x
+$$
 
 
 
