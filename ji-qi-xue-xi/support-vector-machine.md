@@ -276,7 +276,7 @@ $$
 0\leq\alpha_i \leq C
 $$
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%288%29.png)
 
 左图这边，我们可以的看到，此时$$y_1\ne y_2$$，此时的限制条件就可以写成$$\alpha_1-\alpha_2=k$$，根据$$k$$的正负可以得到不同的上下界，因此可以写成：
 
