@@ -4,5 +4,5 @@
 
 比较大的括号有几种方式：【\big\( \bigg\( \Big\( \Bigg\(】，效果：$$\big( \bigg( \Big( \Bigg($$
 
-
+箭头的输入方式 ：【\rightarrow \leftarrow】，效果：$$ \rightarrow \leftarrow $$
 
