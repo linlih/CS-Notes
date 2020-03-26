@@ -2,7 +2,7 @@
 
 ## Jensen's inequality
 
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%2810%29.png)
 
 首先要明确下凸函数的概念：每条弦都位于图像或其上方，就称这个函数是凸函数。
 

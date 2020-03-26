@@ -20,7 +20,7 @@ L1正则在统计学的文献中被称之为lasso（least absolute shrinkage and
 
 直观的解释如下：假设现在有一个二维的$$w=(w_1, w_2)$$，蓝色是误差函数的优化，橙色是正则化的限制区域，从右图中可以看到，此时最优解$$w^*$$ 在$$w_2$$轴上，此时的$$w_1 = 0$$，更倾向得到稀疏解。左边的L2正则的限制区域为圆，此时得到的$$w^*$$落在象限内，两个维度上都不为0。
 
-![](../.gitbook/assets/image%20%2810%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 这里给出了关于L1为什么得到的是稀疏模型的更多[解释1](https://stats.stackexchange.com/questions/45643/why-l1-norm-for-sparse-models)，[解释2](https://www.zhihu.com/question/37096933)，[解释3](https://blog.csdn.net/fantacy10000/article/details/90647686)
 
