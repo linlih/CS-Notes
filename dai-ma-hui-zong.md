@@ -2,5 +2,7 @@
 
 [SVM From Scratch](https://github.com/linlih/CS-Notes/blob/master/code/SVM_from_scratch.ipynb)
 
+[BackPropagation](https://github.com/linlih/CS-Notes/blob/master/code/BackPropagation.ipynb)
+
 
 
