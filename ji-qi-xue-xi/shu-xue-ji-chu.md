@@ -32,7 +32,13 @@ $$
 
 ## Jocobian矩阵&Hessian矩阵
 
+Jocobian矩阵是由一阶偏导数构成的
 
+Hessian矩阵是由二阶偏导数构成的
+
+参考：
+
+[Jacobian矩阵和Hessian矩阵](https://www.cnblogs.com/wangyarui/p/6407604.html)
 
 
 
