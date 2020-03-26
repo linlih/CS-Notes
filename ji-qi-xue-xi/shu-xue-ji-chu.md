@@ -30,6 +30,8 @@ $$
 f\Big(\int \boldsymbol xp( \boldsymbol x) d \boldsymbol x\Big) \leq \int f( \boldsymbol x)p( \boldsymbol x)d \boldsymbol x
 $$
 
+## Jocobian矩阵&Hessian矩阵
+
 
 
 
