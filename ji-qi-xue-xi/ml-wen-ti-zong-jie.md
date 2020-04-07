@@ -37,3 +37,7 @@ data['occupation']   # 返回的格式是：pandas.core.frame.DataFrame
 
 
 
+## 打印juypter运行时间
+
+magic函数 magic有行魔法%time 和单元魔法%%time
+
