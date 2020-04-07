@@ -45,7 +45,12 @@ print(imp.fit_transform(df))
 
 {% embed url="https://towardsdatascience.com/machine-learning-with-datetime-feature-engineering-predicting-healthcare-appointment-no-shows-5e4ca3a85f96" %}
 
-
+```python
+# 使用pandas的to_datetime函数
+date_test = data[['Date']]
+date_test = pd.to_datetime(data['Date'][0], format='%Y-%m-%d',errors = 'coerce')
+date_test.year
+```
 
 
 

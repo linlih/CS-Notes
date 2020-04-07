@@ -29,10 +29,20 @@ ref: [https://blog.csdn.net/lanchunhui/article/details/49493633](https://blog.cs
 使用read\_csv读入文件的时候，访问的方式不同得到的变量的类型不同
 
 ```python
-import pandas ad pd
+import pandas as pd
 data = pd.read_csv('train.csv')
 data['occupation']     # 返回的格式是：pandas.core.series.Series
 data[['occupation']]   # 返回的格式是：pandas.core.frame.DataFrame
+```
+
+判断一个数据内容是否为空
+
+```python
+import pandas as pd
+import numpy as np
+x = np.nan
+# x = pd.NA
+pd.isnull(x)
 ```
 
 
