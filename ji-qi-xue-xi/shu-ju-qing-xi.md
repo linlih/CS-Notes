@@ -1,6 +1,6 @@
 # 数据清洗
 
-### 缺失值处理
+## 缺失值处理
 
 针对sklearn 0.22.x版本与之前的版本不太一样，0.16.x是放在preprocessing模块下，而**0.22.x版本则是放在了impute模块下面**，要注意！
 
@@ -39,7 +39,9 @@ print(imp.fit_transform(df))
 """
 ```
 
+## 时间特征的处理
 
+[https://blog.csdn.net/qq\_38262266/article/details/100059962](https://blog.csdn.net/qq_38262266/article/details/100059962)
 
 
 

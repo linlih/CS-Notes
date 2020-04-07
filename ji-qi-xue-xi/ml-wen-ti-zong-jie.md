@@ -31,8 +31,8 @@ ref: [https://blog.csdn.net/lanchunhui/article/details/49493633](https://blog.cs
 ```python
 import pandas ad pd
 data = pd.read_csv('train.csv')
-data[['occupation']] # 返回的格式是：pandas.core.series.Series
-data['occupation']   # 返回的格式是：pandas.core.frame.DataFrame
+data['occupation']     # 返回的格式是：pandas.core.series.Series
+data[['occupation']]   # 返回的格式是：pandas.core.frame.DataFrame
 ```
 
 
