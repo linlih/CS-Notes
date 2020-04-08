@@ -45,6 +45,16 @@ x = np.nan
 pd.isnull(x)
 ```
 
+创建一个新的DataFrame变量，增加新的一行数据
+
+```python
+import pandas as pd
+df = pd.DataFrame([],columns=['one','two'])  
+# df = df.append才可以生效，直接是df.append不可以
+df = df.append([{'one':10.0, 'two': 90}],ignore_index = True)
+df.append([{'one':"11.0", 'two': 90}], ignore_index = True)
+```
+
 
 
 ## 打印juypter运行时间
