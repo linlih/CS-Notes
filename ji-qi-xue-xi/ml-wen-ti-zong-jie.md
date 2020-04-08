@@ -51,6 +51,7 @@ pd.isnull(x)
 import pandas as pd
 df = pd.DataFrame([],columns=['one','two'])  
 # df = df.append才可以生效，直接是df.append不可以
+# ignore_index=True，表示的是让index从0开始依次递增
 df = df.append([{'one':10.0, 'two': 90}],ignore_index = True)
 df.append([{'one':"11.0", 'two': 90}], ignore_index = True)
 ```
