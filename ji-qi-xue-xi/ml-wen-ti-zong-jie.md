@@ -56,6 +56,14 @@ df = df.append([{'one':10.0, 'two': 90}],ignore_index = True)
 df.append([{'one':"11.0", 'two': 90}], ignore_index = True)
 ```
 
+Series变量如何reshape
+
+```python
+# data['China'] # 假定该变量为Series类型
+# reshape的方式如下
+data['China'].values.reshape(-1, 1)
+```
+
 
 
 ## 打印juypter运行时间
