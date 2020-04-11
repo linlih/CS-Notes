@@ -60,7 +60,7 @@ Series变量如何reshape
 
 ```python
 # data['China'] # 假定该变量为Series类型
-# reshape的方式如下
+# reshape的方式如下, .values得到的是一个ndarray
 data['China'].values.reshape(-1, 1)
 ```
 
