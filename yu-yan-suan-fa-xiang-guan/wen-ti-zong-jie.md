@@ -21,5 +21,7 @@ sudo make
 sudo make install
 ```
 
+## OpenCV在ubuntu平台上的安装
 
+[https://docs.opencv.org/3.1.0/d7/d9f/tutorial\_linux\_install.html](https://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html)
 
