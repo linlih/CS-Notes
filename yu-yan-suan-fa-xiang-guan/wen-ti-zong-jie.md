@@ -23,5 +23,13 @@ sudo make install
 
 ## OpenCV在ubuntu平台上的安装
 
-[https://docs.opencv.org/3.1.0/d7/d9f/tutorial\_linux\_install.html](https://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html)
+{% embed url="https://docs.opencv.org/3.1.0/d7/d9f/tutorial\_linux\_install.html" %}
+
+## 运行service，返回unknown job
+
+解决办法，加上sudo即可，原因如下：
+
+{% embed url="https://www.cnblogs.com/linuxzxy/p/6542884.html" %}
+
+
 
