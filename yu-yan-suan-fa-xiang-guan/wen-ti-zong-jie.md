@@ -23,7 +23,13 @@ sudo make install
 
 ## OpenCV在ubuntu平台上的安装
 
+下面这个链接是官方提供的安装github上最新版本的：
+
 {% embed url="https://docs.opencv.org/3.1.0/d7/d9f/tutorial\_linux\_install.html" %}
+
+Ubuntu上安装3.4版本
+
+{% embed url="https://www.linuxidc.com/Linux/2019-05/158462.htm" %}
 
 ## 运行service，返回unknown job
 
