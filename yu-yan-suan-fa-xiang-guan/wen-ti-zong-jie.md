@@ -37,5 +37,19 @@ Ubuntu上安装3.4版本
 
 {% embed url="https://www.cnblogs.com/linuxzxy/p/6542884.html" %}
 
+## vidioc\_queryctrl input/output error opencv
+
+出现这个错误，分成两步完成：
+
+首先安装相应的库：sudo apt-get install libv4l-0 libv4l-dev
+
+然后重新编译opencv：编译选项中加入：cmake -DWITH\_LIBV4L=ON
+
+
+
+
+
+
+
 
 
