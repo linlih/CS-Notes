@@ -15,6 +15,7 @@
 * [降维和度量学习](ji-qi-xue-xi/jiang-wei-he-du-liang-xue-xi.md)
 * [决策树](ji-qi-xue-xi/jue-ce-shu.md)
 * [神经网络](ji-qi-xue-xi/shen-jing-wang-luo.md)
+* [神经网络优化器](ji-qi-xue-xi/shen-jing-wang-luo-you-hua-qi.md)
 * [EM算法](ji-qi-xue-xi/em-suan-fa.md)
 * [ML问题总结](ji-qi-xue-xi/ml-wen-ti-zong-jie.md)
 
@@ -24,5 +25,5 @@
 * [STL 常用算法](yu-yan-suan-fa-xiang-guan/stl-chang-yong-suan-fa.md)
 * [Markdown总结](yu-yan-suan-fa-xiang-guan/markdown-zong-jie.md)
 * [问题总结](yu-yan-suan-fa-xiang-guan/wen-ti-zong-jie.md)
-* [代码汇总](dai-ma-hui-zong.md)
+* [代码汇总](yu-yan-suan-fa-xiang-guan/dai-ma-hui-zong.md)
 
