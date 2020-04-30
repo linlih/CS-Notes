@@ -62,6 +62,8 @@ reference: [http://www.gatsby.ucl.ac.uk/teaching/courses/sntn/sntn-2017/resource
 
 [https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
 
+In these examples, b is a constant scalar, and B is a constant matrix:
+
 <table>
   <thead>
     <tr>
