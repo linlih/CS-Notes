@@ -92,10 +92,21 @@ In these examples, b is a constant scalar, and B is a constant matrix:
     </tr>
     <tr>
       <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p></p>
+        <p>(&#x77E9;&#x9635;&#x662F;&#x5BF9;&#x79F0;&#x77E9;)</p>
+      </td>
     </tr>
   </tbody>
 </table>
+
+## 矩阵的零空间\(nullspace\)
+
+矩阵A的零空间就Ax=0的解的集合。
+
+reference: [https://blog.csdn.net/tengweitw/article/details/40039373?utm\_medium=distribute.pc\_relevant.none-task-blog-BlogCommendFromBaidu-6&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-BlogCommendFromBaidu-6](https://blog.csdn.net/tengweitw/article/details/40039373?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6)
+
+
 
 
 
