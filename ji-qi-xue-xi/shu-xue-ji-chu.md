@@ -2,8 +2,6 @@
 
 ## Jensen's inequality
 
-![](../.gitbook/assets/image%20%2810%29.png)
-
 首先要明确下凸函数的概念：每条弦都位于图像或其上方，就称这个函数是凸函数。
 
 从数轴的$$x=a$$到$$x=b$$中间的所有值可以写成$$\lambda a+(1-\lambda)b$$，其中$$0\leq \lambda \leq 1$$。弦\(图中的蓝色直线\)上的点可以写成$$\lambda f(a) +(1-\lambda)f(b)$$，凸函数对应的值为$$f(\lambda a +(1-\lambda)b)$$，这样，凸函数的性质可以写成：
@@ -32,9 +30,9 @@ $$
 
 ## Jocobian矩阵&Hessian矩阵
 
-Jocobian矩阵是由一阶偏导数构成的
+Jocobian矩阵是由**一阶偏导数**构成的
 
-Hessian矩阵是由二阶偏导数构成的
+Hessian矩阵是由**二阶偏导数**构成的
 
 参考：
 
@@ -55,6 +53,43 @@ Hessian矩阵是由二阶偏导数构成的
 ## 张量
 
 
+
+
+
+## 矩阵求导
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">
+        <p>Scaler derivative</p>
+        <p></p>
+      </th>
+      <th style="text-align:left">
+        <p>Vector derivative</p>
+        <p></p>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
