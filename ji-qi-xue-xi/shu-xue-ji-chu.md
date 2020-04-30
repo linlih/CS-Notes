@@ -58,6 +58,10 @@ Hessian矩阵是由**二阶偏导数**构成的
 
 ## 矩阵求导
 
+reference: [http://www.gatsby.ucl.ac.uk/teaching/courses/sntn/sntn-2017/resources/Matrix\_derivatives\_cribsheet.pdf](http://www.gatsby.ucl.ac.uk/teaching/courses/sntn/sntn-2017/resources/Matrix_derivatives_cribsheet.pdf)
+
+[https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
+
 <table>
   <thead>
     <tr>
