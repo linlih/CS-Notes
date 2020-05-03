@@ -17,12 +17,6 @@
 
 
 
-$$
-\begin{align} 
-x^T C x &= x^T (BAB^T) x \ &= (x^T B) A (B^T x) \ &= (B^T x)^T A (B^T x) \ &= y^T A y \ &\ge 0 
-\end{align}
-$$
-
 ## 机器学习
 
 {% page-ref page="ji-qi-xue-xi/ji-qi-xue-xi.md" %}
