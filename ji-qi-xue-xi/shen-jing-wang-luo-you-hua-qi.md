@@ -44,7 +44,7 @@ MBGD则是综合了BGD和SGD的特点，每次选择所有样本的一个小批�
 
 ## Adagrad
 
-
+[https://www.cnblogs.com/yunqishequ/p/10026758.html](https://www.cnblogs.com/yunqishequ/p/10026758.html)
 
 ## RMSprop
 
