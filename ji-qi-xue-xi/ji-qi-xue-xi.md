@@ -34,6 +34,8 @@ print(accuracy_score(y_true, y_hat)) # 0.5错误
 > tn : true negtive，表示预测结果为负例的正确数量  
 > fn : false negtive，表示预测结果为负例的错误数量
 
+![](../.gitbook/assets/image%20%283%29.png)
+
 ### 查准率
 
 查准率从字面上也很好理解，就是保证分类器挑出的正例的正确性，简单说就是衡量分类器选择的商品一定是好商品的能力。

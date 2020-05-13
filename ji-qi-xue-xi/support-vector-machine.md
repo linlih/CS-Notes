@@ -190,7 +190,7 @@ $$
 \alpha_1y_1 + \alpha_2y_2 = \gamma
 $$
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 然后我们按照固定的两个参数写出有优化的式子，将其他与$$\alpha_1，\alpha_2$$无关的常数项写成C：
 
@@ -276,7 +276,7 @@ $$
 0\leq\alpha_i \leq C
 $$
 
-![](../.gitbook/assets/image%20%2811%29.png)
+![](../.gitbook/assets/image%20%2813%29.png)
 
 左图这边，我们可以的看到，此时$$y_1\ne y_2$$，此时的限制条件就可以写成$$\alpha_1-\alpha_2=k$$，根据$$k$$的正负可以得到不同的上下界，因此可以写成：
 
