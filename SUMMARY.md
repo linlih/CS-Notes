@@ -16,6 +16,7 @@
 * [决策树](ji-qi-xue-xi/jue-ce-shu.md)
 * [神经网络](ji-qi-xue-xi/shen-jing-wang-luo.md)
 * [神经网络优化器](ji-qi-xue-xi/shen-jing-wang-luo-you-hua-qi.md)
+* [Autoencoders & GANs](ji-qi-xue-xi/autoencoders-and-gans.md)
 * [IoU](ji-qi-xue-xi/iou.md)
 * [EM算法](ji-qi-xue-xi/em-suan-fa.md)
 * [ML问题总结](ji-qi-xue-xi/ml-wen-ti-zong-jie.md)
