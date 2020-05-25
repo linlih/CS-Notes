@@ -20,6 +20,7 @@
 * [IoU](ji-qi-xue-xi/iou.md)
 * [EM算法](ji-qi-xue-xi/em-suan-fa.md)
 * [ML问题总结](ji-qi-xue-xi/ml-wen-ti-zong-jie.md)
+* [如何阅读论文](ji-qi-xue-xi/ru-he-yue-du-lun-wen.md)
 
 ## 语言、算法相关
 
