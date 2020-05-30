@@ -102,6 +102,8 @@ In these examples, b is a constant scalar, and B is a constant matrix:
   </tbody>
 </table>
 
+
+
 ## 矩阵的零空间\(nullspace\)
 
 矩阵A的零空间就Ax=0的解的集合。

@@ -10,13 +10,11 @@
 
 重要的是要理解将**一个神经元要看成两个小单元组成**，下图中的$$out_(o1)$$和$$net_{o1}$$，然后根据网络结构得到得到要计算参数的路径，沿着路径，根据链式法则，就可以写出完整的求导式子，举个例子，要计算$$\frac{\partial E_{total}}{\partial w_5}$$,可以看到从$$E_{o1}$$误差到$$w_5$$的路径：$$E_{o1}\rightarrow out_(o1)\rightarrow net_{o1} \rightarrow w_5$$，路径有了，就可以很轻松写出下面图片中求导式子了。
 
-![](../.gitbook/assets/image%20%285%29.png)
+![](../.gitbook/assets/image%20%2817%29.png)
 
 看一个来自两条路径的，这里在$$h1$$这个节点就要分成两部分来写，如下如图公式：
 
-
-
-![](../.gitbook/assets/image%20%287%29.png)
+![](../.gitbook/assets/image%20%2816%29.png)
 
 总的来说就是把握住要求参数的路径，就可以写出对应的求导式子。
 
