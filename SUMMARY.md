@@ -24,6 +24,7 @@
 
 ## 语言、算法相关
 
+* [平衡二叉树AVL](yu-yan-suan-fa-xiang-guan/ping-heng-er-cha-shu-avl.md)
 * [STL容器](yu-yan-suan-fa-xiang-guan/untitled.md)
 * [STL 常用算法](yu-yan-suan-fa-xiang-guan/stl-chang-yong-suan-fa.md)
 * [Markdown总结](yu-yan-suan-fa-xiang-guan/markdown-zong-jie.md)
