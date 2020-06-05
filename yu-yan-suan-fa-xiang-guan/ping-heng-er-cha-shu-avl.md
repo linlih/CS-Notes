@@ -141,6 +141,8 @@ node *insert(node *root, int val) {
 
 以上，我们则可以完美地拿下AVL树了，如果还不是很明白，那就多找几篇文章来看下吧，多花点时间琢磨琢磨，一定可以把AVL树学明白的！
 
+绘图文件，请参考[这里](https://github.com/linlih/CS-Notes/blob/master/AVL.drawio)。使用的是[draw.io](http://draw.io)平台，可以直接导入该文件。
+
 ## Reference
 
 参考代码来源：[https://github.com/liuchuo/PAT/blob/master/AdvancedLevel\_C%2B%2B/1066.%20Root%20of%20AVL%20Tree%20\(25\).cpp](https://github.com/liuchuo/PAT/blob/master/AdvancedLevel_C%2B%2B/1066.%20Root%20of%20AVL%20Tree%20%2825%29.cpp)
