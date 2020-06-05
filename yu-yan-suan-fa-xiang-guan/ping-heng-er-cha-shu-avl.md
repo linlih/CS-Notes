@@ -35,8 +35,9 @@ struct node {
 // root为上图的结点1，t为上图的结点2，t为旋转后的新的root结点
 node *rotateLeft(node *root) {
     node *t = root->right; // 当前root的右孩子作为新的root，t为新的root结点
-    root->right = t->left; // 原先root结点的
-    t->left = root;
+    // 由于结点2的左旋上去后，root作为它的左孩子，那么原来结点2的左孩子放到root的右孩子上
+    root->right = t->left; 
+    t->left = root; // 原来的root结点放到新root结点t的左孩子上
     return t;
 }
 ```
