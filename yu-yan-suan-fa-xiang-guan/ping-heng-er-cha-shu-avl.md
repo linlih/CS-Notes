@@ -99,20 +99,21 @@ node *rotateRightLeft(node *root) {
 
 ```cpp
 node *insert(node *root, int val) {
-    if (root == NULL) {
+    if (root == NULL) { // root为空则创建新结点
         root = new node();
         root->val = val;
         root->left = root->right = NULL;
     }
-    else if (val < root->val){
-        root->left = insert(root->left, val);
-        if (getHeight(root->left) - getHeight(root->right) == 2)
-            root = val < root->left->val ? rotateRight(root):
-            rotateLeftRight(root);
+    else if (val < root->val){ // 插入结点的值小于root，则插入root的左子树上
+        root->left = insert(root->left, val); // 递归调用，直到插入到叶子结点上
+        if (getHeight(root->left) - getHeight(root->right) == 2) // 插入完成后，判断树是否失衡
+            // 插入值小于root结点左孩子的值，只需要右旋，否则先左旋后右旋
+            root = val < root->left->val ? rotateRight(root):rotateLeftRight(root);
     }
-    else {
+    else { // 插入结点的值大于等于root，则插入root的右子树上
         root->right = insert(root->right, val);
         if (getHeight(root->left) - getHeight(root->right) == -2) 
+            // 插入值大于root结点右孩子的值，只需要左旋，否则先右旋后左旋
             root = val > root->right->val ? rotateLeft(root):rotateRightLeft(root);
     }
     return root;
