@@ -27,7 +27,7 @@ struct node {
 
 左旋图示：
 
-![](../.gitbook/assets/image%20%2820%29.png)
+![](../.gitbook/assets/image%20%2821%29.png)
 
 左旋代码：
 
@@ -60,6 +60,40 @@ node *rotateRight(node *root) {
     return t;
 }
 ```
+
+### 先左旋后右旋
+
+图示：
+
+![](../.gitbook/assets/image%20%2824%29.png)
+
+代码：
+
+```cpp
+// 代码很明确的，先将root的左孩子左旋，然后root再右旋
+node *rotateLeftRight(node *root) {
+    root->left = rotateLeft(root->left);
+    return rotateRight(root);
+}
+```
+
+### 先右旋后左旋
+
+图示：
+
+![](../.gitbook/assets/image%20%2825%29.png)
+
+代码：
+
+```cpp
+// 代码很明确的，先将root的右孩子右旋，然后root再左旋
+node *rotateRightLeft(node *root) {
+    root->right = rotateRight(root->right);
+    return rotateLeft(root);
+}
+```
+
+我们可以看到，在对于旋转的代码上实现是比较明确的，结合图例很好理解，难点在于我们插入的时候根据什么来判断要进行何种旋转，下面我们来看下
 
 
 
