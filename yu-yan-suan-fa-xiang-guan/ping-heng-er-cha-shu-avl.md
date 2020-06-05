@@ -93,7 +93,37 @@ node *rotateRightLeft(node *root) {
 }
 ```
 
-我们可以看到，在对于旋转的代码上实现是比较明确的，结合图例很好理解，难点在于我们插入的时候根据什么来判断要进行何种旋转，下面我们来看下
+我们可以看到，在对于旋转的代码上实现是比较明确的，结合图例很好理解，难点在于我们插入的时候根据什么来判断要进行何种旋转，下面我们来看下插入代码的实现：
+
+### 插入代码
+
+```cpp
+node *insert(node *root, int val) {
+    if (root == NULL) {
+        root = new node();
+        root->val = val;
+        root->left = root->right = NULL;
+    }
+    else if (val < root->val){
+        root->left = insert(root->left, val);
+        if (getHeight(root->left) - getHeight(root->right) == 2)
+            root = val < root->left->val ? rotateRight(root):
+            rotateLeftRight(root);
+    }
+    else {
+        root->right = insert(root->right, val);
+        if (getHeight(root->left) - getHeight(root->right) == -2) 
+            root = val > root->right->val ? rotateLeft(root):rotateRightLeft(root);
+    }
+    return root;
+}
+```
 
 
+
+
+
+## Reference
+
+参考代码来源：[https://github.com/liuchuo/PAT/blob/master/AdvancedLevel\_C%2B%2B/1066.%20Root%20of%20AVL%20Tree%20\(25\).cpp](https://github.com/liuchuo/PAT/blob/master/AdvancedLevel_C%2B%2B/1066.%20Root%20of%20AVL%20Tree%20%2825%29.cpp)
 
