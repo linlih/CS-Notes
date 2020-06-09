@@ -579,8 +579,6 @@ multimap案例：存储员工信息：姓名 年龄 电话 工资等
 
 ## STL使用时机
 
-[Untitled](https://www.notion.so/4c14d343a1cb4d2ea2edf126d1e955e7)
-
 vector使用场景：比如软件的历史操作记录的存储。
 
 deque使用场景：比如排队购票系统
