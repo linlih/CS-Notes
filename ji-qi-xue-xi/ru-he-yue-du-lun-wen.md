@@ -47,7 +47,13 @@ PMID：PubMed Unique Identifier，生命科学和医学领域的文献唯一ID
 
 论文最后阅读的总结工作十分重要，不仅仅是对当前论文的总结，也是为后面自身提出新方法，写作论文打下基础。
 
-ref: [吴恩达关于机器学习职业生涯以及阅读论文的一些建议](https://www.jiqizhixin.com/articles/2019-08-26-2)
+## Reference
+
+[吴恩达关于机器学习职业生涯以及阅读论文的一些建议](https://www.jiqizhixin.com/articles/2019-08-26-2)
+
+[沈向洋博士演讲：“You are how you read”](https://www.bilibili.com/video/BV1df4y1m74k)，[图文](https://mp.weixin.qq.com/s/0ugTO36Za96tHD5mbROyJg)
+
+
 
 
 
