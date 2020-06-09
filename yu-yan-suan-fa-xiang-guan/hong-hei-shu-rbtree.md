@@ -12,13 +12,9 @@
 4. 一个结点为红色的话，它的两个孩子都是黑色
 5. 一个结点到任一叶子结点的路径中黑色结点个数相同（不包含该结点）
 
-
-
  **左旋中的“左”，意味着“被旋转的节点将变成一个左节点”**。
 
  **右旋中的“右”，意味着“被旋转的节点将变成一个右节点”**。
-
-
 
 ### 插入结点的时候为什么是将结点涂成红色而不是黑色呢？
 
@@ -40,13 +36,17 @@
 
 
 
-
-
 ## reference
 
 {% embed url="https://www.cnblogs.com/skywang12345/p/3245399.html" %}
 
 {% embed url="https://blog.csdn.net/tanrui519521/article/details/80980135" %}
+
+{% embed url="https://blog.csdn.net/chen\_zhang\_yu/article/details/52415077" %}
+
+{% embed url="https://en.wikipedia.org/wiki/Red%E2%80%93black\_tree\#:~:text=In%201972%2C%20Rudolf%20Bayer%20invented,case%20of%20a%20B%2Dtree.&text=In%20a%201978%20paper%2C%20%22A,the%20symmetric%20binary%20B%2Dtree." %}
+
+{% embed url="https://www.youtube.com/watch?v=O3hI9FdxFOM" %}
 
 
 
