@@ -86,6 +86,16 @@ Simon教授给出这样做会产生的两个问题：一是读者这个时候并
 
 你寻找到的专家，老师，朋友给你的一手反馈是非常重要的，因为他们之前没有读过这篇论文，所以要好好珍惜。对于批评和表扬都要虚心接受。也要非常感谢他们为了读你的论文所花费的时间。
 
+## more：语言和格式
+
+基本要求首先就是要在截止日期前提交论文，保证论文长度是满足要求的，要使用相应的拼写检查。
+
+在论文中要给出视觉结构，比如说bullet list， italics，section sub-section等。提前了解怎么样绘制图表，如何插入论文。
+
+语言表达中使用第一人称，我们可以看到，我们跑了34个测试，等等。
+
+语言使用简练的表达。
+
 ## Reference
 
 [Professor Simon Peyton Jones's Talk](https://www.microsoft.com/en-us/research/academic-program/write-great-research-paper/)
