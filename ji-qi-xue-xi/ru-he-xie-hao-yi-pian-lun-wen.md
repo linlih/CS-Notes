@@ -56,12 +56,12 @@ Simon教授给了这样一个例子，想象你是在白板上进行解释说明
 | Paper Structure |
 | :--- |
 | Abstract\(4 sentences\) |
-| Introduction\(1 pages\) |
+| Introduction\(1 page\) |
 | ~~Related work~~ |
 | The problem\(1 page\) |
 | My idea\(2 pages\) |
-| **Related work\(1-2 pages\)** |
 | The details\(5 pages\) |
+| **Related work\(1-2 pages\)** |
 | Conclusion and further work\(0.5 pages\) |
 
 Simon教授指出，不应该将Related work放在Introduction后面。原因是这样的，这篇论文主要是想向读者表达你是怎么处理解决这个问题，所以应该让读者的焦点放在你对这问题的解决思路上，如果在Introduction之后马上放Related work可能会使读者感到困惑。
