@@ -34,19 +34,17 @@
 
 插入的调整过程和AVL树很类似，但是触发旋转或者着色调整的判断条件不一样，在AVL树中是根据树的平衡因子绝对值大于1则需要进行旋转。而红黑树判断则是插入红色结点后出现两个连续红色结点，则需要进行结点调整，以及重新涂色。调整的结点位置和调整方式和AVL树是类似的，有差别的地方就是红黑树的上色问题。
 
+### 为什么有n个结点的红黑树高度&lt;=log2\(n+1\)?
 
+1\) 对于一棵不同的二叉树，如果k为根节点到叶节点的最短距离，那么$$n\geq2^k-1$$
 
 ## reference
-
-{% embed url="https://www.cnblogs.com/skywang12345/p/3245399.html" %}
 
 {% embed url="https://blog.csdn.net/tanrui519521/article/details/80980135" %}
 
 {% embed url="https://blog.csdn.net/chen\_zhang\_yu/article/details/52415077" %}
 
 {% embed url="https://en.wikipedia.org/wiki/Red%E2%80%93black\_tree\#:~:text=In%201972%2C%20Rudolf%20Bayer%20invented,case%20of%20a%20B%2Dtree.&text=In%20a%201978%20paper%2C%20%22A,the%20symmetric%20binary%20B%2Dtree." %}
-
-{% embed url="https://www.youtube.com/watch?v=O3hI9FdxFOM" %}
 
 
 
