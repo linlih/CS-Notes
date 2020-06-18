@@ -44,6 +44,10 @@
 
 以上，我们可以得到结论，n个结点的红黑树的高度是$$\leq 2log_2(n+1)$$
 
+
+
+[代码实现](https://github.com/linlih/CodeExercise/blob/master/DataStructure/BinaryTree/RedBlackTree.cpp)
+
 ## reference
 
 {% embed url="https://blog.csdn.net/tanrui519521/article/details/80980135" %}
