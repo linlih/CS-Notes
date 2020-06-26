@@ -19,7 +19,23 @@ dfs+dijkstra 1087.All Roads Lead to Rome \(30分\)
 | 1 | 有理数分数求和 | 1081.Rational Sum \(20分\) |
 | 2 | 有理数分数四则运算  | 1088.Rational Arithmetic \(20分\)  |
 
+辗转相除法：
 
+```c
+long long gcd (long long a, long long b) {
+    return (b == 0)? abs(a) : gcd(b, a % b);
+}
+```
 
   
+
+
+
+
+
+
+
+## 参考材料
+
+1. [柳婼大神的PAT github](https://github.com/liuchuo/PAT)
 
