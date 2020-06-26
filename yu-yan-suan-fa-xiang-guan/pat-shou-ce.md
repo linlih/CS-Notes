@@ -22,6 +22,13 @@ dfs+dijkstra 1087.All Roads Lead to Rome \(30分\)
 辗转相除法：
 
 ```c
+/*
+ 例子：求1071 和462的最大公约数
+ 1071 = 2 X 462 + 147   a = 1071, b = 462
+ 462 = 3 X 147 + 21     a = 462 , b = 147
+ 147 = 7 X 21 + 0       a = 147 , b = 21
+                        a = 21  , b = 0
+ */
 long long gcd (long long a, long long b) {
     return (b == 0)? abs(a) : gcd(b, a % b);
 }
