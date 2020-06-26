@@ -34,7 +34,21 @@ long long gcd (long long a, long long b) {
 }
 ```
 
-  
+  素数判断
+
+```c
+bool isPrime(int n) {
+    if (n <= 1) return false;
+    int sqr = int(sqrt(n * 1.0));
+    for (int i = 2; i <= sqr; i++) {
+        if (n % i == 0)
+            return false;
+    }
+    return true;
+}
+```
+
+
 
 
 
