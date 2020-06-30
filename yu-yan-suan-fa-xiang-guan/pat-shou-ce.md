@@ -48,7 +48,16 @@ bool isPrime(int n) {
 }
 ```
 
+闰年判断
 
+```c
+bool isLeap(int year) {
+    // 能被4整除但不能被100整除，或者是能被400整除的
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+```
+
+进制转换：
 
 
 
