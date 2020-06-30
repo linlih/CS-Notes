@@ -59,7 +59,14 @@ bool isLeap(int year) {
 
 进制转换：
 
-
+```c
+// 将sum转换成d进制
+int ans[31], num = 0;
+do {
+    ans[num++] = sum % d;
+    sum /= d;
+} while(sum!= 0);
+```
 
 
 
