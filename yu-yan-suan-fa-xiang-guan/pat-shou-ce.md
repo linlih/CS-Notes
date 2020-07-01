@@ -94,6 +94,7 @@ void selecetSort(int arr[], int n) {
 void insertSort(int arr[], int n) {
     for (int i = 1; i < n; ++i) {
         int temp = arr[i], j = i;
+        // 找到已排序中的插入位置
         while(j > 0 && temp < arr[j]) {
             arr[j] = arr[j-1];
             j--;
