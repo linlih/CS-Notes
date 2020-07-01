@@ -74,7 +74,19 @@ do {
 
 ### 选择排序
 
-
+```c
+void selecetSort(int arr[], int n) {
+    for (int i = 0; i < n-1; ++i) {
+        int k = i;
+        // 找到序列中未排序的最小元素
+        for (int j = i+1; j < n; ++j) {
+            if (arr[j] < arr[i])
+                k = j;
+        }
+        swap(arr[i], arr[k];
+    }
+}
+```
 
 ### 交换排序
 
