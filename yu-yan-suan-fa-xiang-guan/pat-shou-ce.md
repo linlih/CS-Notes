@@ -88,7 +88,20 @@ void selecetSort(int arr[], int n) {
 }
 ```
 
-### 交换排序
+### 插入排序
+
+```c
+void insertSort(int arr[], int n) {
+    for (int i = 1; i < n; ++i) {
+        int temp = arr[i], j = i;
+        while(j > 0 && temp < arr[j]) {
+            arr[j] = arr[j-1];
+            j--;
+        }
+        arr[j] = temp;
+    }
+}
+```
 
 
 
