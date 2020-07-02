@@ -114,8 +114,8 @@ void insertSort(int arr[], int n) {
 
 | 序号 | 类型 | 题目 |
 | :--- | :--- | :--- |
-| 1 | 判断是否是插入排序，归并排序的序列 | 1089.Insert or Merge \(25分\) |
-| 2 | 判断是否是插入排序，堆排序的序列 | 1098.Insertion or Heap Sort \(25分\) |
+| 1 | 判断是否是插入排序，归并排序的序列 | [1089.Insert or Merge \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805377432928256) |
+| 2 | 判断是否是插入排序，堆排序的序列 | [1098.Insertion or Heap Sort \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805368847187968) |
 
 
 
