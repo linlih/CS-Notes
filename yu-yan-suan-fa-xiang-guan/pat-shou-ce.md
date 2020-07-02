@@ -114,8 +114,8 @@ void insertSort(int arr[], int n) {
 
 | 序号 | 类型 | 题目 |
 | :--- | :--- | :--- |
-| 1 | 有理数分数求和 | 1081.Rational Sum \(20分\) |
-| 2 | 有理数分数四则运算  | 1088.Rational Arithmetic \(20分\)  |
+| 1 | 判断是否是插入排序，归并排序的序列 | 1089.Insert or Merge \(25分\) |
+| 2 | 判断是否是插入排序，堆排序的序列 | 1098.Insertion or Heap Sort \(25分\) |
 
 
 
