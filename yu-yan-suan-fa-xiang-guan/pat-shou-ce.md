@@ -130,7 +130,7 @@ void insertSort(int arr[], int n) {
  判断方法是很trivial的，首先插入排序的特定是每次排序一个元素，并且是从右往左开始依次排序
  得到的序列结果是已排序部分是有序的，未排序部分是没有进行任何操作的
  */
-for (int i = 0; i < n - 1 && b[i] <= b[i+1]; ++i); // 判断已排序部分
+for (int i = 0; i < n - 1 && b[i] <= b[i+1]; ++i); // 找到已排序和未排序的分界点
 for (int j = i + 1; a[j] == b[j] && j < n; ++j);   // 未排序部分没有操作，固和原序列一致
 if (j == n) {
     cout << "Insertion Sort" << endl;
