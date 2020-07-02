@@ -108,6 +108,49 @@ void insertSort(int arr[], int n) {
 
 ### 快速排序
 
+```c
+void quickSort(int arr[], int left, int right) {
+    if (right <= left) return;
+    int pivot = selectPivot(left, right);
+    swap(arr, pivot, right);
+    pivot = partion(arr, left, right);
+    quickSort(arr, left, pivot - 1);
+    quickSort(arr, pivot + 1, right);
+}
+
+int selectPivot(int left, int right) {
+    return (left + right)/2;
+}
+
+int partion(int arr[], int left, int right) {
+    int l = left;
+    int r = right;
+    int temp = arr[right];
+    while(l != r) {
+        while(arr[l] <= temp && r > l)
+            l++;
+        if (l < r) {
+            arr[r] = arr[l];
+            r--;
+        }
+        while(arr[r] >= temp && r > l)
+            r--;
+        if (l < r) {
+            arr[l] = arr[r];
+            l++
+        }
+    }
+    arr[l] = temp;
+    return l;
+}
+```
+
+### 归并排序
+
+```c
+
+```
+
 
 
 考察的题型有：
