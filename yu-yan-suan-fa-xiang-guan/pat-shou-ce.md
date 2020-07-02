@@ -74,6 +74,24 @@ do {
 
 关于排序，基本排序算法基本不会让你自己实现，所以对于选择排序，插入排序，快速排序这些，只需了解基本思想，能够知道实现流程即可。可能考察的题型，是链表的排序，就需要用到选择排序，或者插入排序的思想，因为链表不能直接跳转，无法直接使用sort函数。
 
+### 冒泡排序
+
+```c
+void bubbleSort(int arr[], int n) {
+    bool NoSwap;
+    for (int i = 0; i < n - 1; ++i) {
+        NoSwap = true;
+        for (int j = n - 1; j > i; --j) {
+            if (arr[j] < arr[j - 1]) {
+                swap(arr[j], arr[j - 1]);
+                NoSwap = false;
+            }
+        }
+        if (NoSwap) return;
+    }
+}
+```
+
 ### 选择排序
 
 ```c
@@ -85,7 +103,7 @@ void selecetSort(int arr[], int n) {
             if (arr[j] < arr[i])
                 k = j;
         }
-        swap(arr[i], arr[k];
+        swap(arr[i], arr[k]);
     }
 }
 ```
