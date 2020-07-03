@@ -210,7 +210,9 @@ sort(a, a + i + 2);
 | :--- | :--- | :--- |
 | 1 | 判断序列元素是否可以作为pivot | [1101.Quick Sort \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805366343188480) |
 
+判断的思想是这样，一个元素能够作为pivot的条件是，序列的左半部分比pivot小，右半部分比pivot大，关键点在于，这个选为pivot的数值在一轮排序中是处于最后位置的，这个是这道题的核心。如果直接判断左半部分和右半部分满不满足条件的话，测试用例会超时，因为这样是$$ O(n^2)$$的时间复杂度。
 
+这道题的其他解法，参考： [DedicateToA 的这篇文章](https://blog.csdn.net/DedicateToAI/article/details/102680110)。
 
 
 
@@ -220,7 +222,15 @@ sort(a, a + i + 2);
 
 
 
+## 注意！！
 
+1. 使用scanf读入字符时要注意，前面加个空格，原因[参考这里](https://blog.csdn.net/weixin_46368810/article/details/105867661)
+
+```c
+// 输入为：1 2
+// 这样才可以正确读取到内容
+scanf(" %c %c", &a, &b);
+```
 
 ## 参考材料
 
