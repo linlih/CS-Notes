@@ -218,7 +218,13 @@ sort(a, a + i + 2);
 
 ## 深度优先搜索和广度优先搜索
 
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 供应链所有价格 | [1079.Total Sales of Supply Chain \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805388447170560) |
+| 2 | 供应链最大价格 | [1090.Highest Price in Supply Chain \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805376476626944) |
+| 3 | 供应链最小价格 | [1106.Lowest Price in Supply Chain \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805362341822464) |
 
+这三道题的类型一致，都是深度优先搜索，只不过根据题目的要求不同判断条件不同，万变不离其宗，可以对比着学习。
 
 
 
