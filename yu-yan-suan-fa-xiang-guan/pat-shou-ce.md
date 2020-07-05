@@ -22,9 +22,8 @@ Dijkstra算法：
 // 这里为了注释的方便，一个变量写成一行，运用时直接写到一行即可
 // n为顶点数目
 int e[maxv][maxv]; // e为记录边的邻接矩阵, maxv为最大顶点数
-int dis[maxv];  // 顶点的距离数组
-int weight[maxv]; // 边的权重数组
-bool visit[maxv];
+int dis[maxv];     // 顶点的距离数组
+bool visit[maxv];  // 访问数组
 const int inf = 99999999;
 
 fill(e[0], e[0] + maxv * maxv, inf);
@@ -33,6 +32,8 @@ fill(dis, dis + maxv, inf);
 dis[0] = 0;
 for (int i = 0; i < n; ++i) {
     int u = -1, minn = inf;
+    // 这里的查找可以用堆排序来实现降低时间复杂度
+    // 但是比赛过程再去实现一个堆排序不是我们的目的，直接遍历查找就好
     for (int j = 0; j < n; ++j) {
         if (visit[j] == false && dis[j] < minn) {
             u = j;
@@ -46,6 +47,9 @@ for (int i = 0; i < n; ++i) {
             dis[v] = dis[u] + e[u][v];
     }
 }
+
+// 邻接表版本
+// 这个版本实现起来没有邻接矩阵版本简洁，不推荐使用，仅做了解
 ```
 
 ## 算术运算 
