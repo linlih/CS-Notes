@@ -15,7 +15,37 @@ dfs+dijkstra 1087.All Roads Lead to Rome \(30分\)
 Dijkstra算法：
 
 ```c
-#include <i
+// 代码来自《算法笔记》和柳神的Github
+// 调整了大写字母，在比赛或者考试中尽量选择好打的字母，大写字符输入较慢
+
+// 邻接矩阵版本
+// 这里为了注释的方便，一个变量写成一行，运用时直接写到一行即可
+// n为顶点数目
+int e[maxv][maxv]; // e为记录边的邻接矩阵, maxv为最大顶点数
+int dis[maxv];  // 顶点的距离数组
+int weight[maxv]; // 边的权重数组
+bool visit[maxv];
+const int inf = 99999999;
+
+fill(e[0], e[0] + maxv * maxv, inf);
+fill(dis, dis + maxv, inf);
+
+dis[0] = 0;
+for (int i = 0; i < n; ++i) {
+    int u = -1, minn = inf;
+    for (int j = 0; j < n; ++j) {
+        if (visit[j] == false && dis[j] < minn) {
+            u = j;
+            minn = dis[j];
+        }
+    }
+    if (u == -1) break;
+    visit[u] = true;
+    for (int v = 0; v < n; v++) {
+        if (visit[v] == false && e[u][v] != inf && dis[v] > dis[u] + e[u][v])
+            dis[v] = dis[u] + e[u][v];
+    }
+}
 ```
 
 ## 算术运算 
@@ -251,6 +281,14 @@ sort(a, a + i + 2);
 // 这样才可以正确读取到内容
 scanf(" %c %c", &a, &b);
 ```
+
+  2. i++和++i
+
+在代码里面，我们可以看到for循环的第三个表达式有两种写法，i++和++i，那么这两个区别是什么呢，要用哪一个呢？结论是用哪一个都可以，但是效率上有一点点差别，但是随着现代编译器和计算机性能的发展，这个差别几乎可以不考虑。那么差别在哪里呢？
+
+
+
+输入
 
 ## 参考材料
 
