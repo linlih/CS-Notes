@@ -6,6 +6,35 @@
 
  二叉树的遍历：前序，中序，后序  1086.Tree Traversals Again \(25分\)
 
+
+
+判断一个二叉树是否是完全二叉树
+
+```c
+bool judge(int root) {
+    if ( == -1) return true;
+    queue<int> q;
+    q.push(root);
+    while (!q.empty()) {
+        int tmp = q.front();
+        q.pop();
+        if (tmp != -1) {
+            q.push(node[tmp].left);
+            q.push(node[tmp].right);
+        }
+        else {
+            while (!q.empty()) {
+                tmp = q.front();
+                q.pop();
+                if (tmp != -1)
+                    return false;
+            }
+        }
+    }
+    return true;
+}
+```
+
 ## 图 
 
 dfs+dijkstra 1087.All Roads Lead to Rome \(30分\)
