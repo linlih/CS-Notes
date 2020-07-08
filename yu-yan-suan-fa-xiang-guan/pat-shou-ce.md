@@ -6,6 +6,72 @@
 
  二叉树的遍历：前序，中序，后序  1086.Tree Traversals Again \(25分\)
 
+### 平衡二叉树
+
+考察题目：
+
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 求解平衡二叉树的根节点 | [1066.Root of AVL Tree \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805404939173888) |
+
+具体的代码解释，请查看[这里](https://linlh.gitbook.io/cs-notes/yu-yan-suan-fa-xiang-guan/ping-heng-er-cha-shu-avl)。
+
+```c
+struct node {
+    int val;
+    struct node *left, *right;
+};
+
+node *rotateLeft(node *root) {
+    node *t = root->right;
+    root->right = t->left;
+    t->left = root;
+    return t;
+}
+
+node *rotateRight(node *root) {
+    node *t = root->left;
+    root->left = t->right;
+    t->right = root;
+    return t;
+}
+
+node *rotateLeftRight(node *root) {
+    root->left = rotateLeft(root->left);
+    return rotateRight(root);
+}
+
+node *rotateRightLeft(node *root) {
+    root->right = rotateRight(root->right);
+    return rotateLeft(root);
+}
+
+int getHeight(node *root) {
+    if(root == NULL) return 0;
+    return max(getHeight(root->left), getHeight(root->right)) + 1;
+}
+
+node *insert(node *root, int val) {
+    if (root == NULL) {
+        root = new node();
+        root->val = val;
+        root->left = root->right = NULL;
+    }
+    else if (val < root->val){
+        root->left = insert(root->left, val);
+        if (getHeight(root->left) - getHeight(root->right) == 2)
+            root = val < root->left->val ? rotateRight(root):
+            rotateLeftRight(root);
+    }
+    else {
+        root->right = insert(root->right, val);
+        if (getHeight(root->left) - getHeight(root->right) == -2) 
+            root = val > root->right->val ? rotateLeft(root):rotateRightLeft(root);
+    }
+    return root;
+}
+```
+
 
 
 判断一个二叉树是否是完全二叉树
@@ -41,9 +107,9 @@ bool judge(int root) {
 
 | 序号 | 类型 | 题目 |
 | :--- | :--- | :--- |
-| 1 | 找到每个人归属的社群 | 1107.Social Clusters \(30分\) |
-| 2 | 计算家族房产 | 1114.Family Property \(25分\) |
-| 3 | 判断鸟儿是否属于同一棵树 | 1118.Birds in Forest \(25分\) |
+| 1 | 找到每个人归属的社群 | [1107.Social Clusters \(30分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805361586847744) |
+| 2 | 计算家族房产 | [1114.Family Property \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805356599820288) |
+| 3 | 判断鸟儿是否属于同一棵树 | [1118.Birds in Forest \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805354108403712) |
 
 ```c
 // 并查集主要就是两个操作，一个查找，一个合并
@@ -132,8 +198,8 @@ for (int i = 0; i < n; ++i) {
 
 | 序号 | 类型 | 题目 |
 | :--- | :--- | :--- |
-| 1 | 有理数分数求和 | 1081.Rational Sum \(20分\) |
-| 2 | 有理数分数四则运算  | 1088.Rational Arithmetic \(20分\)  |
+| 1 | 有理数分数求和 | [1081.Rational Sum \(20分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805386161274880) |
+| 2 | 有理数分数四则运算  | [1088.Rational Arithmetic \(20分\) ](https://pintia.cn/problem-sets/994805342720868352/problems/994805378443755520) |
 
 辗转相除法：
 
