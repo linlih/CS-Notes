@@ -35,6 +35,51 @@ bool judge(int root) {
 }
 ```
 
+### 并查集
+
+考察的题目有：
+
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 找到每个人归属的社群 | 1107.Social Clusters \(30分\) |
+| 2 | 计算家族房产 | 1114.Family Property \(25分\) |
+| 3 | 判断鸟儿是否属于同一棵树 | 1118.Birds in Forest \(25分\) |
+
+```c
+// 并查集主要就是两个操作，一个查找，一个合并
+// 需要的数据结构为数组，存储自己的parent
+int fa[maxn] = {0};
+
+// find为algorithm中的函数，所以这里的Find首字母大写
+int Find(int i) {
+   int root = i;
+   while(root != fa[root])
+      root = fa[root];
+   
+   // 路径压缩
+   int t = i;
+   int p;
+   while (t != root) {
+      p = fa[t];
+      fa[t] = root;
+      t = p;
+   }
+   return root;
+}
+
+// union为关键字，写的时候要注意
+void Union(int i, int j) {
+   int ri = find(i);
+   int rj = find(j);
+   if (ri != rj)
+      fa[ri] = rj;
+}
+```
+
+
+
+
+
 ## 图 
 
 dfs+dijkstra 1087.All Roads Lead to Rome \(30分\)
