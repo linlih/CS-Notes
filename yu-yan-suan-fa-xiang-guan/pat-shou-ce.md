@@ -89,6 +89,20 @@ node *create(int preL, int preR, int inL, int inR) {
 }
 
 /* 依葫芦画瓢，可以写出给定中序后序构建二叉树的过程 */
+node *create(int inL, int inR, int postL, int postR){
+    if (postL > postR) return NULL;
+    node *root = new node;
+    root->val = post[postR];
+    int k;
+    for (k = inL; k <= inR; ++k) {
+        if (in[k] == post[postR])
+            break;
+    }
+    int numLeft = k - inL;
+    root->left = create(inL, k - 1, postL, postL + numLeft - 1);
+    root->right = create(k + 1, inR, postL + numLeft, postR - 1);
+    return root;
+}
 ```
 
 
