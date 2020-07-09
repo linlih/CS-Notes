@@ -62,7 +62,8 @@ void layerOrder(node *root){
 
 | 序号 | 类型 | 题目 |
 | :--- | :--- | :--- |
-| 1 | 依据后序中序输出前序 | 1020.Tree Traversals \(25分\) |
+| 1 | 依据后序中序输出前序 | [1020.Tree Traversals \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805485033603072) |
+| 2 | 给定前序后序输出中序\(不一定唯一\) | [1119.Pre- and Post-order Traversals \(30分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805353470869504) |
 
 代码实例：
 
