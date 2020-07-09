@@ -14,7 +14,7 @@
 | :--- | :--- | :--- |
 | 1 | 求解平衡二叉树的根节点 | [1066.Root of AVL Tree \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805404939173888) |
 
-具体的代码解释，请查看[这里](https://linlh.gitbook.io/cs-notes/yu-yan-suan-fa-xiang-guan/ping-heng-er-cha-shu-avl)。
+这道题的本质就是构建一颗平衡二叉树，然后输出它的根节点即可，具体的代码解释，请查看[这里](https://linlh.gitbook.io/cs-notes/yu-yan-suan-fa-xiang-guan/ping-heng-er-cha-shu-avl)。
 
 ```c
 struct node {
