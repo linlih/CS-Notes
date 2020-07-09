@@ -70,11 +70,10 @@ void layerOrder(node *root){
 /**
  * 依据前序中序构建二叉树
  * 前序区间[preL, preR]，中序区间[inL, inR]
- * 前序访问顺序：根左右，中序访问顺序：左根右
- * 
+ * 前序访问顺序：根左右，中序访问顺序：左根右 
  */ 
 node *create(int preL, int preR, int inL, int inR) {
-    if (preL > preR) return;
+    if (preL > preR) return NULL;
     node *root = new node;
     root->data = pre[preL]; // 前序根左右的根节点
     int k;
@@ -88,6 +87,8 @@ node *create(int preL, int preR, int inL, int inR) {
     root->right = create(preL + numLeft + 1, preR, k + 1, inR);
     return root;
 }
+
+/* 依葫芦画瓢，可以写出给定中序后序构建二叉树的过程 */
 ```
 
 
