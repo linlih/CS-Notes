@@ -14,7 +14,79 @@
 
 不加证明地给出，已知前序中序，或者中序后序可以唯一确定一颗二叉树，给定前序后序则不一定可以唯一确定一颗二叉树。
 
+```c
+struct node {
+    int val;
+    node *left, *right;
+};
+// 三个遍历方式的递归实现是很容易记的，按照访问顺序依次写即可
+void preOrder(node *root) {
+    if (root == NULL) return;
+    printf("%d", root->val);
+    preOrder(root->left);
+    preOrder(root->right);
+}
 
+void inOrder(node *root) {
+    if (root == NULL) return;
+    inOrder(root->left);
+    printf("%d", root->val);
+    inOrder(root->right);
+}
+
+void postOrder(node *root) {
+    if (root == NULL) return;
+    postOrder(root->left);
+    postOrder(root->right);
+    printf("%d", root->val);
+}
+
+// 层序遍历
+void layerOrder(node *root){
+    if (root == NULL) return;
+    queue<node*> q;
+    q.push(root);
+    while(!q.empty()) {
+        node *u = q.front();
+        q.pop();
+        printf("%d", u->val);
+        if (root->left != NULL)
+            q.push(root->left);
+        if (root->right != NULL)
+            q.push(root->right);
+    }
+}
+```
+
+考察题目：
+
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 依据后序中序输出前序 | 1020.Tree Traversals \(25分\) |
+
+代码实例：
+
+```c
+/**
+ * 依据前序中序构建二叉树
+ * 
+ */ 
+node *create(int preL, int preR, int inL, int inR) {
+    if (preL > preR) return;
+    node *root = new node;
+    root->data = pre[preL];
+    int k;
+    for (k = inL; k <= inR; ++k) {
+        if (in[k] == pre[preL]) 
+            break;
+    }
+    int numLeft = k - inL;
+    
+    root->left = create(preL + 1, preL + numLeft, inL, k - 1);
+    root->right = create(preL + numLeft + 1, preR, k + 1, inR);
+    return root;
+}
+```
 
 
 
