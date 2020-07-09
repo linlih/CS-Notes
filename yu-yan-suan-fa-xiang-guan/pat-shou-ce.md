@@ -6,7 +6,7 @@
 
 对于二叉树的遍历方式有三种分别是：
 
-前序：根左右（根节点，左孩子，右孩子）
+前序\(先序\)：根左右（根节点，左孩子，右孩子）
 
 中序：左根右（左孩子，根节点，右孩子），如果是二叉搜索树，这个访问结果序列为有序序列
 
@@ -69,19 +69,21 @@ void layerOrder(node *root){
 ```c
 /**
  * 依据前序中序构建二叉树
+ * 前序区间[preL, preR]，中序区间[inL, inR]
+ * 前序访问顺序：根左右，中序访问顺序：左根右
  * 
  */ 
 node *create(int preL, int preR, int inL, int inR) {
     if (preL > preR) return;
     node *root = new node;
-    root->data = pre[preL];
+    root->data = pre[preL]; // 前序根左右的根节点
     int k;
-    for (k = inL; k <= inR; ++k) {
+    for (k = inL; k <= inR; ++k) { // 找到中序左根右的根位置
         if (in[k] == pre[preL]) 
             break;
     }
-    int numLeft = k - inL;
-    
+    int numLeft = k - inL; 
+    // 依据中序根节点的位置分割序列构建左右子树
     root->left = create(preL + 1, preL + numLeft, inL, k - 1);
     root->right = create(preL + numLeft + 1, preR, k + 1, inR);
     return root;
