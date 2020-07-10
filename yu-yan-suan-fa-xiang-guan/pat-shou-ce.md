@@ -117,6 +117,8 @@ node *create(int inL, int inR, int postL, int postR){
 | 序号 | 类型 | 题目 |
 | :--- | :--- | :--- |
 | 1 | 求解平衡二叉树的根节点 | [1066.Root of AVL Tree \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805404939173888) |
+| 2 | 创建平衡二叉树+判断完全二叉树 | [1123.Is It a Complete AVL Tree \(30分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805351302414336) |
+| 3 | 创建一颗二叉搜索树 | [1099.Build A Binary Search Tree \(30分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805367987355648) |
 
 这道题的本质就是构建一颗平衡二叉树，然后输出它的根节点即可，具体的代码解释，请查看[这里](https://linlh.gitbook.io/cs-notes/yu-yan-suan-fa-xiang-guan/ping-heng-er-cha-shu-avl)。
 
