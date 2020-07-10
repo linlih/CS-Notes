@@ -203,6 +203,28 @@ bool judge(int root) {
     }
     return true;
 }
+
+bool judge(node *root) {
+    queue<node*> q;
+    q.push(root);
+    while(!q.empty()) {
+        node *u = q.front();
+        q.pop();
+        if (u != NULL) {
+            q.push(u->left);
+            q.push(u->right);
+        }
+        else {
+            while(!q.empty()) {
+                u = q.front();
+                q.pop();
+                if (u != NULL)
+                    return false;
+            }
+        }
+    }
+    return true;
+}
 ```
 
 ### 并查集
