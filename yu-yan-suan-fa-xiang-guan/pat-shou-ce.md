@@ -110,6 +110,36 @@ node *create(int inL, int inR, int postL, int postR){
 }
 ```
 
+考察题目：
+
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 给定前序中序，输出后序 | [1138.Postorder Traversal \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805345078067200) |
+
+这道题的要求是输出后序访问中的第一个元素，参考柳神的代码中，我们可以得到不需要构建二叉树，直接输出这颗二叉树的后序思路，具体如下：
+
+```c
+void postOrder(int preL, int inL, int inR) {
+    if (inL > inR) return;
+    int i = inL;
+    while(in[i] != pre[preL]) i++;
+    postOrder(preL + 1, inL, i - 1); // 相当于遍历左子树
+    postOrder(preL + i - inL + 1, i + 1, inR); // 相当于遍历右子树
+    printf("%d ", in[i]);
+}
+
+// 同样的，可以得到给定中序后序输出前序
+void preOrder(int postR, int inL, int inR) {
+    if (inL > inR || postR < 0) return;
+    printf("%d ", post[postR]);
+    int i = inL;
+    while(in[i] != post[postR]) i++;
+    preOrder(postR - inR + i - 1, inL, i - 1); // inR - i是右子树的结点数量
+    preOrder(postR - 1, i + 1, inR);
+}
+
+```
+
 
 
 二叉树的遍历：前序，中序，后序  1086.Tree Traversals Again \(25分\)
