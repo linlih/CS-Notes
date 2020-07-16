@@ -363,7 +363,7 @@ for (int i = 0; i < n; ++i) {
 | 1 | 有理数分数求和 | [1081.Rational Sum \(20分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805386161274880) |
 | 2 | 有理数分数四则运算  | [1088.Rational Arithmetic \(20分\) ](https://pintia.cn/problem-sets/994805342720868352/problems/994805378443755520) |
 
-最大公约数：
+### 最大公约数
 
 ```c
 /*
@@ -379,7 +379,7 @@ long long gcd (long long a, long long b) {
 }
 ```
 
-  素数判断
+### 素数判断
 
 ```c
 bool isPrime(int n) {
@@ -393,7 +393,7 @@ bool isPrime(int n) {
 }
 ```
 
-闰年判断
+### 闰年判断
 
 ```c
 bool isLeap(int year) {
@@ -402,7 +402,7 @@ bool isLeap(int year) {
 }
 ```
 
-进制转换：
+### 进制转换
 
 ```c
 // 将sum转换成d进制
@@ -420,6 +420,10 @@ while(x != 0) {
     product = product * d;
 }
 ```
+
+### 哈希表构建-平方探测法
+
+注意的要点是，当H\(key\)被占用的时候，下一次的探测位置的计算公式为H\(key\) + k^2，和H\(key\) - k^2的平方，如果超过了哈希表的长度，那么就需要对表长取模。那么探测的次数要几次呢，如果一直没找到什么时候退出？这里的判断标准是k落在\[0, tsize\)内，如果k大于等于ksize时，一定无法找到了。
 
 
 
