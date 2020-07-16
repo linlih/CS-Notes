@@ -423,11 +423,42 @@ while(x != 0) {
 
 ### 哈希表构建-平方探测法
 
-注意的要点是，当H\(key\)被占用的时候，下一次的探测位置的计算公式为H\(key\) + k^2，和H\(key\) - k^2的平方，如果超过了哈希表的长度，那么就需要对表长取模。那么探测的次数要几次呢，如果一直没找到什么时候退出？这里的判断标准是k落在\[0, tsize\)内，如果k大于等于ksize时，一定无法找到了。
+注意的要点是，当H\(key\)被占用的时候，下一次的探测位置的计算公式为H\(key\) + k^2，和H\(key\) - k^2的平方，如果超过了哈希表的长度，那么就需要对表长取模。那么探测的次数要几次呢，如果一直没找到什么时候退出？这里的判断标准是**k落在\[0, tsize\)**内，如果k大于等于ksize时，一定无法找到了。
 
+考察题目：
 
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1145 | 哈希表-平方探测 | 1145.Hashing - Average Search Time \(25分\) |
 
-
+```c
+int tsize, n, m, a;
+cin >> tsize >> n >> m;
+while(!isPrime(tsize)) tsize++;
+vector<int> v(tsize);
+for (int i = 0; i < n; ++i) {
+    scanf("%d", &a);
+    int flag = 0;
+    for (int j = 0; j < tsize; j++) {// 这里j的取值范围只要[0, tsize)
+        int pos = (a + j * j ) % tsize;
+        if (v[pos] == 0) {
+            v[pos] = a;
+            flag = 1;
+            break;
+        }
+    }
+    if (!flag) printf("%d cannot be inserted.\n", a);
+}
+int ans = 0;
+for (int i = 0; i < m; ++i) {
+    scanf("%d", &a);
+    for (int j = 0; j <= tsize; j++) {
+        ans ++;
+        int pos = (a + j * j) % tsize;
+        if (v[pos] == a || v[pos] == 0) break; 
+    }
+}
+```
 
 ## 排序
 
