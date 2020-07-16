@@ -594,6 +594,26 @@ int month[13][2] = {{0, 0}, {31, 31}, {28, 29}, {30, 30}, {31, 31}, {30, 30}, {3
 bool isLeap(int year) {
     return (year % 4 == 0 && year % 100 != 0) || (year % 400) == 0);
 }
+
+// 这里假设了time1的时间小于time2
+int time1, time2; // 日期格式为20200101的形式，求的是time1和time2相差的天数
+int y1, y2, m1, m2, d1, d2;
+y1 = time1 / 10000, m1 = time1 % 10000 / 100, di = time1 % 100;
+y2 = time2 / 10000, m2 = time2 % 10000 / 100, d2 = time2 % 100;
+
+int ans = 1; // 用于记录相差天数的结果
+while(y1 < y2 || m1 < m2 || d1 < d2) {
+    d1 ++;
+    if (d1 = month[m1][isLeap(y1)] + 1) {
+        m1 ++;
+        d1 = 1;
+    }
+    if (m1 == 13) {
+        y1++;
+        m1 == 1;
+    }
+    ans ++;
+}
 ```
 
 
