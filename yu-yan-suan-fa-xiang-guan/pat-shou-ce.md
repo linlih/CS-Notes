@@ -435,6 +435,15 @@ long long gcd (long long a, long long b) {
 }
 ```
 
+### 最小公倍数
+
+```c
+long long lcm(long long a, long long b) {
+    long long d = gcd(a, b);
+    return (a/d)*b;
+}
+```
+
 ### 素数判断
 
 ```c
