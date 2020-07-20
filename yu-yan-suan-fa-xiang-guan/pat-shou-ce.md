@@ -613,8 +613,9 @@ int partion(int arr[], int left, int right) {
 
 ```c
 const int maxn = 100;
+// 归并排序归并的是相邻的两个区间，[L1,R1]和[L2, R2]
 void merge(int A[], int L1, int R1, int L2, int R2) {
-    int i = L1, j = L2;
+    int i = L1, j = L2; 、、
     int temp[maxn], index = 0;
     while(i <= R1 && j <= R2) {
         if (A[i] <= A[j])
