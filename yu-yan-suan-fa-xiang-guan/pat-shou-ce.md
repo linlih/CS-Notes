@@ -517,6 +517,7 @@ for (int i = 0; i < n; ++i) {
 int ans = 0;
 for (int i = 0; i < m; ++i) {
     scanf("%d", &a);
+    // find a
     for (int j = 0; j <= tsize; j++) {
         ans ++;
         int pos = (a + j * j) % tsize;
