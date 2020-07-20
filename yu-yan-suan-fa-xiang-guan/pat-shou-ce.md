@@ -745,10 +745,6 @@ void generateP(int index) {
 
 这道题难度不大，核心就是判断N皇后的位置不在对角线以及同一行即可。
 
-
-
-
-
 ### 日期处理
 
 输出两个日期的差值，两个日期之间相差多少天，思路是对小的日期进行++，直到等于大的日期。
@@ -786,7 +782,19 @@ while(y1 < y2 || m1 < m2 || d1 < d2) {
 }
 ```
 
+## 快速幂
 
+```c
+typedef long long LL;
+LL binaryPow(LL a, LL b, LL m) {
+    if (b==0) return 1;
+    if (b % 2 == 1) return a * binaryPow(a, b - 1, m) % m;
+    else {
+        LL mul = binaryPow(a, b / 2, m);
+        return mul * mul %m;
+    }
+}
+```
 
 
 
