@@ -1,5 +1,9 @@
 # PAT手册
 
+PAT甲级考试总共有4道题，考察的类型分别如下：
+
+
+
 
 
 ## 树
@@ -742,4 +746,6 @@ for (int i = 0; i < len; ++i) {
 
 1. [柳婼大神的PAT github](https://github.com/liuchuo/PAT)
 2. 《算法笔记》胡凡.曾磊.著
-
+3. 《算法笔记 - 上机训练实战指南》 胡凡.曾磊.著
+4.  浒鱼鱼的[CSDN博客](https://blog.csdn.net/allisonshing)
+5. 
