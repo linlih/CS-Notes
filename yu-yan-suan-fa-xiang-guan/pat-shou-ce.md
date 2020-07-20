@@ -34,7 +34,7 @@
 
 
 
-PAT甲级考试总共有4道题，考察的类型分别如下：
+PAT甲级考试总共有4道题，考察的类型分别如下\(参考自浒鱼鱼的[文章](https://blog.csdn.net/allisonshing/article/details/104213959)\)：
 
 | 题号 | 考察知识点 |  |
 | :--- | :--- | :--- |
@@ -720,7 +720,7 @@ void generateP(int index) {
         bool flag = true;
         for (int i = 1; i <= n; ++i) {
             for (int j = i + 1; j<= n; ++j) {
-                if (abs(i - j) == abs[P[i] - P[j])) {
+                if (abs(i - j) == abs[P[i] - P[j])) { // 对角线判断
                     flag = false;
                 }
             }
@@ -741,9 +741,9 @@ void generateP(int index) {
 
 | 序号 | 类型 | 题目 |
 | :--- | :--- | :--- |
-| 1 | 判断是否满足N皇后的排列序列 | 1128 N Queens Puzzle \(20分\) |
+| 1 | 判断是否满足N皇后的排列序列 | [1128 N Queens Puzzle \(20分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805348915855360) |
 
-
+这道题难度不大，核心就是判断N皇后的位置不在对角线以及同一行即可。
 
 
 
