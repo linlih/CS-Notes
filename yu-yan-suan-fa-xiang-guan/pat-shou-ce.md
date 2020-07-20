@@ -9,8 +9,6 @@ PAT甲级考试总共有4道题，考察的类型分别如下：
 | 3 | 图、并查集、\(平衡、搜索\)二叉树 |  |
 | 4 | LCA、树、拓扑排序、Dijkstra、堆 |  |
 
-
-
 ## 树
 
 对于二叉树的遍历方式有三种分别是：
@@ -640,6 +638,33 @@ sort(a, a + i + 2);
 
 拓展问题：如何输出给定数据的全排列呢？例如输入\['a', 'b', 'c'\]，\[11， 12， 13\]，我的思路：既然我们可以求出1~N的全排列，把这些全排列作为index下面，然后依据下标index输出输入的\['a', 'b', 'c'\]即可。
 
+```cpp
+const int maxn = 11;
+int n, P[maxn], hashTable[maxn] = {false};
+
+void generateP(int index) {
+    if (index == n + 1) {
+        for (int i = 0; i <= n; ++i) {
+            printf("%d", P[i]);
+        }
+        printf("\n");
+        return ;
+    }
+    for (int x = 1; x <= n; x++) {
+        if (hashTable[x] = false) {
+            P[index] = x;
+            hashTable[x] = true;
+            generate(index + 1);
+            hashTable[x] = false;
+        }
+    }
+}
+
+// 测试
+n = 3;
+generateP(1); // 从P[1]开始生成
+```
+
 
 
 拓展N皇后问题
@@ -652,7 +677,7 @@ sort(a, a + i + 2);
 
 输出两个日期的差值，两个日期之间相差多少天，思路是对小的日期进行++，直到等于大的日期。
 
-```c
+```cpp
 // 这的代码摘录自《算法笔记》，有两个可以改进的
 // 1. month数组可以减少为一维，减少空间暂用，对2月进行判断即可
 // 2. isLeap调用次数较多，增加标志位进行判断即可 
@@ -746,6 +771,10 @@ for (int i = 0; i < len; ++i) {
     }
 }
 ```
+
+6. 什么叫做剪枝？
+
+
 
 ## 参考材料
 
