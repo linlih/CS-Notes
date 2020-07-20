@@ -458,10 +458,6 @@ bool isPrime(int n) {
 }
 ```
 
-
-
-
-
 ### 闰年判断
 
 ```c
@@ -489,6 +485,60 @@ while(x != 0) {
     product = product * d;
 }
 ```
+
+### 分数
+
+```c
+struct Fraction {
+    int up, down;
+}
+
+Fraction reduction(Fraction result) {
+    if (result.down < 0) {
+        result.down = -result.down;
+        result.up = -reuslt.up;
+    }
+    if (result.up == 0) {
+        result.down = 1
+    }
+    else {
+        int d = gcd(abs(result.up, result.down));
+        result.up /= g;
+        result.down /= g;
+    }
+    return result;
+}
+
+Fraction add(Fraction f1, Fraction f2) {
+    Fraction result;
+    result.up = f1.up * f2.down + f1.down * f2.up;
+    result.down = f1.down * f2.down;
+    return reduction(result);
+}
+
+Fraction minus(Fraction f1, Fraction f2) {
+    Fraction result;
+    result.up = f1.up * f2.down - f1.down * f2.up;
+    result.down = f1.down * f2.down;
+    return reduction(result);
+}
+
+Fraction mul(Fraction f1, Fraction f2) {
+    Fraction result;
+    result.up = f1.up*f2.up;
+    result.down = f1.down*f2.down;
+    return reduction(result);
+}
+
+Fraction divide(Fraction f1, Fraction f2) {
+    Fraction result;
+    result.up = f1.up * f2.down;
+    result.down = f1.down * f2.up;
+    return reduction(result);
+}
+```
+
+
 
 ### 哈希表构建-平方探测法
 
