@@ -623,7 +623,8 @@ void merge(int A[], int L1, int R1, int L2, int R2) {
         else 
             temp[index++] = B[j++];   
     }
-    while(i <= R1) temp[index++] = A[i++];
+    // 移动剩下的区间
+    while(i <= R1) temp[index++] = A[i++]; 
     while(j <= R2) temp[index++] = B[j++];
     for(int i = 0; i < index; i++) {
         A[L1+i] = temp[i];
@@ -637,6 +638,28 @@ void mergeSort(int A[], int left, int right) {
         mergeSort(A, mid+1, right);
         merge(A, left, mid, mid + 1, right);
     }
+}
+
+// 非递归版本
+void mergeSort(int A[]) {
+    // 每组step长度，前step/2和后step/2的元素合并
+    for (int setp = 2; step / 2 <= n; step *= 2) {
+        for (int i = 1; i <= n; i+= step) {
+            int mid = i + step / 2 - 1;
+            if (mid + 1 < n) {
+                merget(A, i, mid, mid + 1, min(i + step - 1, n);
+            }
+        }
+    }
+}
+
+// 用sort函数替代merge函数，A1089题用到
+void mergeSort(int A[]) {
+    for (int step = 2; step / 2 <= n; step *= 2) {
+        for (int i = 1; i < n; i+= step)
+            sort(A + i, A + min(i + step, n + 1));
+        // 这里可以输出每一趟归并结果
+    }  
 }
 ```
 
