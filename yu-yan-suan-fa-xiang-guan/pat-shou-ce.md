@@ -223,10 +223,6 @@ void preOrder(int postR, int inL, int inR) {
 
 ```
 
-
-
-二叉树的遍历：前序，中序，后序  1086.Tree Traversals Again \(25分\)
-
 ### 平衡二叉树
 
 考察题目：
@@ -471,6 +467,51 @@ double calPostfix() {
         }
     }
     return s.top().num;
+}
+```
+
+### 二叉查找树的结点删除
+
+```c
+
+node *findMax(node *root){
+    while(root->right != NULL) {
+        root = root->right;
+    }
+    return root;
+}
+
+node* findMin(node *root) {
+    while(root->left != NULL) {
+        root = root->left;
+    }
+    return root;
+}
+
+void deleteNode(node *&root, int x) {
+    if (root == NULL) return;
+    if (root->data == x) {
+        if (root->left == NULL && root->right == NULL) {
+            free(root);
+            root = NULL;
+        }
+        else if (root->left != NULL) {
+            node *pre = findMax(root->left);
+            root->data = pre->data;
+            deleteNode(root->left, pre->data);
+        }
+        else {
+            node *next = findMin(root->right);
+            root->data = next->data;
+            deleteNode(root->right, next->data);
+        }
+    }
+    else if (root->data > x) {
+        deleteNode(root->left, x);
+    }
+    else {
+        deleteNode(root->right, x);
+    }
 }
 ```
 
@@ -888,6 +929,16 @@ void insertSort(int arr[], int n) {
 
 ### 快速排序
 
+考察题型：
+
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 判断序列元素是否可以作为pivot | [1101.Quick Sort \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805366343188480) |
+
+判断的思想是这样，一个元素能够作为pivot的条件是，序列的左半部分比pivot小，右半部分比pivot大，关键点在于，这个选为pivot的数值在一轮排序中是处于最后位置的，这个是这道题的核心。如果直接判断左半部分和右半部分满不满足条件的话，测试用例会超时，因为这样是$$ O(n^2)$$的时间复杂度。
+
+这道题的其他解法，参考： [DedicateToA 的这篇文章](https://blog.csdn.net/DedicateToAI/article/details/102680110)。
+
 ```c
 void quickSort(int arr[], int left, int right) {
     if (right <= left) return;
@@ -1016,13 +1067,9 @@ sort(a, a + i + 2);
 
 
 
-| 序号 | 类型 | 题目 |
-| :--- | :--- | :--- |
-| 1 | 判断序列元素是否可以作为pivot | [1101.Quick Sort \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805366343188480) |
+|  |
+| :--- |
 
-判断的思想是这样，一个元素能够作为pivot的条件是，序列的左半部分比pivot小，右半部分比pivot大，关键点在于，这个选为pivot的数值在一轮排序中是处于最后位置的，这个是这道题的核心。如果直接判断左半部分和右半部分满不满足条件的话，测试用例会超时，因为这样是$$ O(n^2)$$的时间复杂度。
-
-这道题的其他解法，参考： [DedicateToA 的这篇文章](https://blog.csdn.net/DedicateToAI/article/details/102680110)。
 
 
 
