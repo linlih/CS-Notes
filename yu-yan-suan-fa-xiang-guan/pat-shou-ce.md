@@ -1288,6 +1288,28 @@ for (int i = 0; i < len; ++i) {
 
 剪枝：在DFS中，通过题目限制条件来减少DFS计算量的方法称之为剪枝。
 
+7. STL中queue的注意事项
+
+```c
+// STL中queue的push操作只是制造了元素的一个副本入队，因此对入队元素的修改不会影响原来的值
+// 二者之间没有关联
+// 所以如果要对队列的元素进行修改的话，不要入队元素本身，而是要入队它们的编号(数组的话就是下标)
+struct node {
+    int data;
+}a[3];
+queue<node> q;
+for (int i = 0; i < 3; ++i) {
+    a[i].data = i;
+    q.push(a[i]);
+}
+q.front().data = 5000;
+printf("%d %d %d\n", a[0].data, a[1].data, a[2].data); // 0 1 2
+a[0].data = 1000;
+a[1].data = 2000;
+a[2].data = 3000;
+printf("%d", q.front().data); // 5000
+```
+
 
 
 ## 参考材料
