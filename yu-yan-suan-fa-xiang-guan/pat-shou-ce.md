@@ -575,6 +575,108 @@ void showFraction(Fraction r) {
 ### 大数计算
 
 ```c
+// 摘录自《算法笔记》P171
+// 注意！这里的计算仅限于正数，负数的话需要改造
+
+struct bign {
+    int d[1000];
+    int len;
+    bign() {
+        memset(d, 0, 1000);
+        len = 0;
+    }
+};
+
+// 逆向赋值的原因是当我们读取一个字符类型的数值比如123，那么最低位是放在字符串最高位的位置
+bign change(char str[]) {
+    bign a;
+    a.len = strlen(str);
+    for (int i = 0; i < a.len; ++i) {
+        a.d[i] = str[a.len - i - 1] - '0'; // 注意这里是逆向赋值
+    }
+    return a;
+}
+
+// @param return: 0相等， 1大数a大，-1大数b大
+int compare(bign a, bign b) {
+    if (a.len > b.len) return 1;
+    else if (a.len < b.len) return -1;
+    else {
+        for (int i = a.len - 1; i >= 0; --i) {
+            if (a.d[i] > b.d[i]) return 1;
+            else if (a.d[i] < b.d[i]) return -1;
+        }
+        return 0;
+    }
+}
+
+bign add(bign a, bign b) {
+    bign c;
+    int carry = 0;
+    // 注意！假定a的位数比较长，那么要保证从[b.len, a.len)这个区间中b.d[]中的数值为0
+    //      否则会出错
+    for (int i = 0; i < a.len || i < b.len; ++i) {
+        int temp = a.d[i] + b.d[i] + carry;
+        c.d[c.len++] = temp % 10;
+        carry = temp / 10; 
+    }
+    if (carry != 0)
+        c.d[c.len++] = carry;
+    return c;
+}
+
+// 这个实现只能计算大数减去小数，也就是a>b，否则会出错
+// 如果是 a < b得到的结果是负数，则需要改造这个函数
+// 可以改造的思路是判断二者大小，转化成大数减去小数
+// 然后需要在bign结构体中加入负数的标志位
+bign sub(bign a, bign b) {
+    bign c;
+    for (int i = 0; i < a.len || i < b.len; ++i) {
+        if (a.d[i] < b.d[i]) {
+            a.d[i + 1]--;
+            a.d[i] += 10;
+        }
+        c.d[c.len++] = a.d[i] - b.d[i];
+    }
+    while (c.len - 1 >= 1 && c.d[c.len - 1] == 0) {
+        c.len--;
+    }
+    return c;
+}
+
+// 这里稍微有点差别，比如说147 × 35，其中147看成是大数，35看成是int
+bign multi(bign a, int b) {
+    bign c;
+    int carry = 0;
+    for (int i = 0; i < a.len; ++i) {
+        int temp = a.d[i] * b + carry;
+        c.d[c.len++] = temp % 10;
+        carry = temp / 10;
+    }
+    while(carry != 0) {
+        c.d[c.len++] = carry % 10;
+        carry /= 10;
+    }
+    return c;
+}
+
+// 传入的初值要设置为0
+bign divide(bign a, int b, int &r) {
+    bign c;
+    c.len = a.len;
+    for (int i = a.len - 1; i >= 0; --i) {
+        r = r * 10 + a.d[i];
+        if (r < b) c.d[i] = 0; // 不够除
+        else {
+            c.d[i] = r / b;
+            r = r % b;
+        }
+    }
+    while(c.len - 1 >= 1 && c.d[c.len - 1] == 0) {
+        c.len --;
+    }
+    return c;
+}
 
 ```
 
@@ -859,6 +961,12 @@ generateP(1); // 从P[1]开始生成
 
 #### 拓展N皇后问题
 
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 判断是否满足N皇后的排列序列 | [1128 N Queens Puzzle \(20分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805348915855360) |
+
+这道题难度不大，核心就是判断N皇后的位置不在对角线以及同一行即可。
+
 简单概述下N皇后问题，就是将N皇后放在N×N的棋盘上，要求是皇后不能处在同一排，同一列以及对角线上，目标是求出这样的排列方式有哪些。
 
 这个问题为什么和全排列有关系呢，是这样的，每个N皇后的摆放位置可以是1N的位置，那么在棋牌上从左到右来看的话，就是每个皇后的位置都是从1~N中选择一个数值，这样满足了不是同一列，那么为了满足不是同一排，那么每个皇后选择的位置是不同的，这样得到的最终数值就是一个全排列，现在唯一不满的就是对角线了，所以只需要在全排列代码的基础上判断不处于对角线即可。
@@ -888,12 +996,6 @@ void generateP(int index) {
     }
 }
 ```
-
-| 序号 | 类型 | 题目 |
-| :--- | :--- | :--- |
-| 1 | 判断是否满足N皇后的排列序列 | [1128 N Queens Puzzle \(20分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805348915855360) |
-
-这道题难度不大，核心就是判断N皇后的位置不在对角线以及同一行即可。
 
 ### 日期处理
 
