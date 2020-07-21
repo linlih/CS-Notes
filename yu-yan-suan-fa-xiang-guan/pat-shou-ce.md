@@ -1007,6 +1007,64 @@ sort(a, a + i + 2);
 
 这三道题的类型一致，都是深度优先搜索，只不过根据题目的要求不同判断条件不同，万变不离其宗，可以对比着学习。
 
+
+
+### 背包问题
+
+n件物品，每件物品的重量为w\[i\]，价值为c\[i\]，现在要选出若干件物品放入一个容量为V的背包中，使得选入背包的物品重量不超过容量V的前提下，让背包中共的物品价值最大。
+
+```c
+// sumW表示的是物品的重量，sumC表示的是物品的价值，index表示的是当前判断的物品编号
+void DFS(int index, int sumW, int sumC) {
+    if (index == n) {
+        if (sumW <= V && sumC > maxValue) {
+            maxValue = sumC;
+        }
+        return;
+    }
+    DFS(index + 1, sumW, sumC); // 不选第index件商品
+    DFS(index + 1, sumW + w[index], sumC + c[index]); // 选第index件商品
+}
+
+// 剪枝版本
+void DFS(int index, int sumW, int sumC) {
+    if (index == n)
+        return;
+    DFS(index + 1, sumW, sumC);
+    if (sumW + w[index] <= V) { // 只有满足了总重量小于背包容量的情况下才能选择该物品
+        if (sumC + c[index] > ans) {
+            ans = sumC + c[index];
+        }
+        DFS(index + 1, sumW + w[index], sumC + c[index]);
+    }
+}
+```
+
+总结：这个问题给了一类常见的DFS问题的解决办法，即给定一个序列，枚举这个序列的所有子序列（可以不连续）。
+
+比如说，从N个整数中选择K个数，使得这个K个数的和为X，如果有多个方案，选择元素平方和最大的一个。
+
+```c
+int n, k, x, maxSumSqu = -1, A[maxn];
+vector<int> temp, ans;
+void DFS(int index, int nowK, int sum, int sumSqu) {
+    if (nowK == k && sum == x) {
+        if (sumSqu > maxSumSqu) {
+            maxSumSqu = sumSqu;
+            ans = temp;
+        }
+        return;
+    }
+    if (index == n || nowK > k || sum > x) return;
+    temp.push_back(A[index]);
+    DFS(index + 1, nowK + 1, sum + A[index], sumSqu + A[index] * A[index]);
+    temp.pop_back();
+    DFS(index + 1, nowK, sum, sumSqu);
+}
+```
+
+
+
 ## 有趣的算法问题
 
 ### 全排列
@@ -1160,59 +1218,7 @@ long long C(long long n, long long m) {
 }
 ```
 
-### 背包问题
-
-n件物品，每件物品的重量为w\[i\]，价值为c\[i\]，现在要选出若干件物品放入一个容量为V的背包中，使得选入背包的物品重量不超过容量V的前提下，让背包中共的物品价值最大。
-
-```c
-// sumW表示的是物品的重量，sumC表示的是物品的价值，index表示的是当前判断的物品编号
-void DFS(int index, int sumW, int sumC) {
-    if (index == n) {
-        if (sumW <= V && sumC > maxValue) {
-            maxValue = sumC;
-        }
-        return;
-    }
-    DFS(index + 1, sumW, sumC); // 不选第index件商品
-    DFS(index + 1, sumW + w[index], sumC + c[index]); // 选第index件商品
-}
-
-// 剪枝版本
-void DFS(int index, int sumW, int sumC) {
-    if (index == n)
-        return;
-    DFS(index + 1, sumW, sumC);
-    if (sumW + w[index] <= V) { // 只有满足了总重量小于背包容量的情况下才能选择该物品
-        if (sumC + c[index] > ans) {
-            ans = sumC + c[index];
-        }
-        DFS(index + 1, sumW + w[index], sumC + c[index]);
-    }
-}
-```
-
-总结：这个问题给了一类常见的DFS问题的解决办法，即给定一个序列，枚举这个序列的所有子序列（可以不连续）。
-
-比如说，从N个整数中选择K个数，使得这个K个数的和为X，如果有多个方案，选择元素平方和最大的一个。
-
-```c
-int n, k, x, maxSumSqu = -1, A[maxn];
-vector<int> temp, ans;
-void DFS(int index, int nowK, int sum, int sumSqu) {
-    if (nowK == k && sum == x) {
-        if (sumSqu > maxSumSqu) {
-            maxSumSqu = sumSqu;
-            ans = temp;
-        }
-        return;
-    }
-    if (index == n || nowK > k || sum > x) return;
-    temp.push_back(A[index]);
-    DFS(index + 1, nowK + 1, sum + A[index], sumSqu + A[index] * A[index]);
-    temp.pop_back();
-    DFS(index + 1, nowK, sum, sumSqu);
-}
-```
+### 
 
 ## 注意！！
 
