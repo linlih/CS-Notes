@@ -112,9 +112,35 @@ void layerOrder(node *root){
 }
 
 // 怎么求一个树节点的高度(层)？
+// 需要增加一个变量layer来记录结点所在的层次
+struct node {
+    int data;
+    int layer;
+    node *left;
+    node *right;
+};
 
-
+void layerOrder(node *root) {
+    if (root == NULL) return;
+    queue<node*> q;
+    root->layer = 1;
+    q.push(root);
+    while(!q.empty()) {
+        node *u = q.front();
+        q.pop();
+        if (u->left != NULL) {
+            u->left->layer = u->layer + 1;
+            q.push(u->left);
+        }
+        if (u->right != NULL) {
+            u->right->layer = u->layer + 1;
+            q.push(u->right);
+        }
+    }
+}
 ```
+
+### 利用遍历序列重构二叉树
 
 考察题目：
 
@@ -122,6 +148,9 @@ void layerOrder(node *root){
 | :--- | :--- | :--- |
 | 1 | 依据后序中序输出前序 | [1020.Tree Traversals \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805485033603072) |
 | 2 | 给定前序后序输出中序\(不一定唯一\) | [1119.Pre- and Post-order Traversals \(30分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805353470869504) |
+| 3 | 给定前序中序，输出后序 | [1086.Tree Traversals Again \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805380754817024) |
+
+第3道题比较“含蓄”地给出前序和中序，前序是其PUSH的序列，而中序是POP的序列。
 
 代码实例：
 
