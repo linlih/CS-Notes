@@ -625,6 +625,28 @@ void Dijkstra(int s) {
 
 ```
 
+### Floyd算法
+
+```c
+const int inf = 99999999;
+const int maxv = 200;
+int n, m;
+int dis[maxv][maxv];
+
+void Floyd() {
+    for (int k = 0; k < n; ++k) {
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < n; ++j) {
+                if (dis[i][k] != inf && dis[k][j] != inf && dis[i][k]  + dis[k][j] < dis[i][j])
+                        dis[i][j] = dis[i][k] + dis[k][j];
+            }
+        }
+    }
+}
+```
+
+
+
 ## 算术运算 
 
 这两道题的核心是最大公约数的求法，使用辗转相除法 
