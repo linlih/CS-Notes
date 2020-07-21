@@ -1165,8 +1165,33 @@ long long C(long long n, long long m) {
 n件物品，每件物品的重量为w\[i\]，价值为c\[i\]，现在要选出若干件物品放入一个容量为V的背包中，使得选入背包的物品重量不超过容量V的前提下，让背包中共的物品价值最大。
 
 ```c
+// sumW表示的是物品的重量，sumC表示的是物品的价值，index表示的是当前判断的物品编号
+void DFS(int index, int sumW, int sumC) {
+    if (index == n) {
+        if (sumW <= V && sumC > maxValue) {
+            maxValue = sumC;
+        }
+        return;
+    }
+    DFS(index + 1, sumW, sumC); // 不选第index件商品
+    DFS(index + 1, sumW + w[index], sumC + c[index]); // 选第index件商品
+}
 
+// 剪枝版本
+void DFS(int index, int sumW, int sumC) {
+    if (index == n)
+        return;
+    DFS(index + 1, sumW, sumC);
+    if (sumW + w[index] <= V) { // 只有满足了总重量小于背包容量的情况下才能选择该物品
+        if (sumC + c[index] > ans) {
+            ans = sumC + c[index];
+        }
+        DFS(index + 1, sumW + w[index], sumC + c[index]);
+    }
+}
 ```
+
+总结：这个
 
 ## 注意！！
 
