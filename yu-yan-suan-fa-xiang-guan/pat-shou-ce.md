@@ -1034,7 +1034,7 @@ while(y1 < y2 || m1 < m2 || d1 < d2) {
 }
 ```
 
-## 快速幂
+### 快速幂
 
 ```c
 typedef long long LL;
@@ -1045,6 +1045,35 @@ LL binaryPow(LL a, LL b, LL m) {
         LL mul = binaryPow(a, b / 2, m);
         return mul * mul %m;
     }
+}
+```
+
+### n!有多少个质因子P
+
+```c
+int cal(int n, int p) {
+    int ans = 0;
+    while(n) {
+        ans += n / p;
+        n /= p;
+    }
+    return ans;
+}
+
+int cal(int n, int p) {
+    if (n / p) return 0;
+    return n/p + cal(n / p, p);
+}
+```
+
+### 组合数
+
+利用公式$$C^m_n = C_{n-1}^m +C_{n-1}^{m-1}$$，这部分内容挺多，直接参考《算法笔记》P183
+
+```c
+long long C(long long n, long long m) {
+    if ( == 0|| m == n) return  1;
+    return C(n - 1, m) + C(n - 1, m - 1);
 }
 ```
 
