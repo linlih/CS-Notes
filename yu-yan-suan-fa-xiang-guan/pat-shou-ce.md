@@ -446,6 +446,12 @@ long long lcm(long long a, long long b) {
 
 ### 素数判断
 
+考察题目：
+
+| 序号 | 类型 | 题目 |
+| :--- | :--- | :--- |
+| 1 | 将数值分解成质因子相乘 | [1059 Prime Factors \(25分\)](https://pintia.cn/problem-sets/994805342720868352/problems/994805415005503488) |
+
 ```c
 bool isPrime(int n) {
     if (n <= 1) return false;
@@ -455,6 +461,23 @@ bool isPrime(int n) {
             return false;
     }
     return true;
+}
+
+// 素数表, 找到从[2~maxn)中的所有素数
+const int maxn = 101;
+int prime[maxn]; 
+int pNum = 0; // 素数表的下标
+bool p[maxn] = {0}; // 记录[2, maxn)中每个数是否访问过
+void Find_Prime() {
+    for (int i = 2; i < maxn; ++i) {
+        if (p[i] == false) {
+            prime[pNum++] = i;
+            // 存在i的倍数的数值一定不是素数, 2i, 3i ....
+            for (int j = i +i; j < maxn; j += i) {
+                p[j] = true;
+            }
+        }
+    }
 }
 ```
 
@@ -549,7 +572,11 @@ void showFraction(Fraction r) {
 }
 ```
 
+### 大数计算
 
+```c
+
+```
 
 ### 哈希表构建-平方探测法
 
