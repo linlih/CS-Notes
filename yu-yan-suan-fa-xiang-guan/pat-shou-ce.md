@@ -1193,6 +1193,27 @@ void DFS(int index, int sumW, int sumC) {
 
 总结：这个问题给了一类常见的DFS问题的解决办法，即给定一个序列，枚举这个序列的所有子序列（可以不连续）。
 
+比如说，从N个整数中选择K个数，使得这个K个数的和为X，如果有多个方案，选择元素平方和最大的一个。
+
+```c
+int n, k, x, maxSumSqu = -1, A[maxn];
+vector<int> temp, ans;
+void DFS(int index, int nowK, int sum, int sumSqu) {
+    if (nowK == k && sum == x) {
+        if (sumSqu > maxSumSqu) {
+            maxSumSqu = sumSqu;
+            ans = temp;
+        }
+        return;
+    }
+    if (index == n || nowK > k || sum > x) return;
+    temp.push_back(A[index]);
+    DFS(index + 1, nowK + 1, sum + A[index], sumSqu + A[index] * A[index]);
+    temp.pop_back();
+    DFS(index + 1, nowK, sum, sumSqu);
+}
+```
+
 ## 注意！！
 
 1. 使用scanf读入字符时要注意，前面加个空格，原因[参考这里](https://blog.csdn.net/weixin_46368810/article/details/105867661)
