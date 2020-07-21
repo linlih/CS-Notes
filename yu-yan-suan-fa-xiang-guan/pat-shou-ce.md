@@ -515,6 +515,38 @@ void deleteNode(node *&root, int x) {
 }
 ```
 
+### 哈夫曼树
+
+```cpp
+#include <iostream>
+#include <queue>
+
+using namespace std;
+
+priority_queue<long long, vector<long long>, greater<long long> > q;
+
+int main()
+{
+    int n;
+    long long temp, x, y, ans = 0;
+    scanf("%d", &n);
+    for (int i = 0; i < n; ++i) {
+        scanf("%lld", &temp);
+        q.push(temp);
+    }
+
+    while(q.size() > 1) {
+        x = q.top();
+        q.pop();
+        y = q.top();
+        q.pop();
+        q.push(x + y);
+        ans += (x + y);
+    }
+    printf("%lld", ans);
+}
+```
+
 ## 图 
 
 dfs+dijkstra 1087.All Roads Lead to Rome \(30分\)
@@ -560,7 +592,37 @@ for (int i = 0; i < n; ++i) {
 }
 
 // 邻接表版本
-// 这个版本实现起来没有邻接矩阵版本简洁，不推荐使用，仅做了解
+struct Node {
+    int v, dis;
+};
+
+vector<Node> Adj[maxv];
+int n;
+int d[maxv];
+bool vis[maxv] = {false};
+
+void Dijkstra(int s) {
+    fill(d, d + maxv, inf);
+    d[s] = 0;
+    for (int i = 0; i < n; ++i) {
+        int u = -1, minn = inf;
+        for (int j = 0; j < n; ++j) {
+            if (vis[j] == false && d[j] < minn) {
+                u = j;
+                minn = d[j];
+            }
+        }
+        if (u == -1) return;
+        vis[u] = true;
+        for (int j = 0; j < Adj[u].size(); j++) {
+            int v = Adj[u][j].v;
+            if (vis[v] == false && d[u] + Adj[u][v].dis < d[v]) {
+                d[v] = Adj[u][v].dis + d[v];
+            }
+        }
+    }
+}
+
 ```
 
 ## 算术运算 
@@ -1070,6 +1132,42 @@ sort(a, a + i + 2);
 |  |
 |  |
 |  |
+
+### 堆排序
+
+```c
+const int maxn  = 100;
+int heap[maxn], n = 10;// 10个元素
+
+// 这一段是核心
+void downAdjust(int low, int high) {
+    int i = low, j = i * 2;
+    while (j <= high) {
+        if (j + 1 <= high && heap[j] < heap[j+1]) j = j + 1; // 找到结点i最大的孩子
+        if (heap[i] >= heap[j]) break; // 已满足大顶堆
+        swap(heap[i], heap[j]);
+        i = j, j = i * 2;
+    }
+}
+
+void createHeap() {
+    for (int i = n / 2; i >= 1; --i) {
+        downAdjust(i, n);
+    }
+}
+
+void heapSort() {
+    createHeap();
+    for (int i = n; i > 1; --i) {
+        swap(heap[i], heap[1]);
+        downAdjust(1, i - 1);
+    }
+}
+```
+
+
+
+
 
 ## 深度优先搜索和广度优先搜索
 
