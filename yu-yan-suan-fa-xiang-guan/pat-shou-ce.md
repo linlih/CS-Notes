@@ -362,7 +362,81 @@ void Union(int i, int j) {
 
 ```
 
+### 中缀&后缀表达式
 
+```cpp
+struct node {
+    double num;
+    char op;
+    bool flag; // true表示操作数， false 表示操作符
+};
+
+string str; // 中缀表达式
+queue<node> q; // 后缀表达式序列
+
+void infixToPostfix() {
+    node temp;
+    stack<node> s; // 操作符栈
+    map<char, int> op; // 记录操作符的优先级
+    // 乘除法的优先级大于加减法
+    op['+'] = op['-'] = 1;
+    op['*'] = op['/'] = 2;
+    for (int i = 0; i < str.length(); ) {
+        // 如果是操作数，直接入队
+        if (str[i] >= '0' && str[i] <='9') {
+            temp.flag = true;
+            temp.num = str[i++] - '0';
+            while(i < str.length() && str[i] >= '0' && str[i] <= '9') {
+                temp.num = temp.num * 10 + (str[i] - '0');
+                i++;
+            }
+            q.push(temp);
+        }
+        else {
+            temp.flag = false;
+            // 操作符的话，需要判断栈顶的操作符优先级
+            // 如果操作符的优先级小于等于栈顶优先级，则入队出栈
+            while(!s.empty() && op[str[i]] <= op[s.top().op]) {
+                q.push(s.top());
+                s.pop();
+            }
+            temp.op = str[i];
+            s.push(temp);
+            i++;
+        }
+    }
+    // 栈中可能还有其他操作符
+    while(!s.empty()) {
+        q.push(s.top());
+        s.pop();
+    }
+}
+
+double calPostfix() {
+    double temp1, temp2;
+    node cur, temp;
+    stack<node> s; // 操作数栈
+    while(!q.empty()) {
+        cur = q.front();
+        q.pop();
+        if (cur.flag == true) s.push(cur); // 如果是操作数，压栈
+        else {
+            // 遇到操作符则出栈操作数进行运算
+            temp2 = s.top().num;
+            s.pop();
+            temp1 = s.top().num;
+            s.pop();
+            temp.flag = true;
+            if (cur.op == '+') temp.num = temp1 + temp2;
+            else if(cur.op == '-') temp.num = temp1 - temp2;
+            else if (cur.op == '*') temp.num = temp1 * temp2;
+            else temp.num = temp1 / temp2;
+            s.push(temp);
+        }
+    }
+    return s.top().num;
+}
+```
 
 ## 图 
 
