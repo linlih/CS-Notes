@@ -645,7 +645,36 @@ void Floyd() {
 }
 ```
 
+### 拓扑排序
 
+```c
+vector<int> G[maxv];
+int n, m, indegree[maxv];
+
+bool topologicalSort() {
+    int num = 0;
+    queue<int> q;
+    for (int i = 0; i < n; ++i) {
+        if (indegree[i] == 0)
+            q.push(i);
+    }
+    while(!q.empty()) {
+        int u = q.front();
+        printf("%d", u);
+        q.pop();
+        for (int i = 0; i < G[u].size(); ++i) {
+            int v = G[u][i];
+            indegree[v]--;
+            if (indegree[v] == 0)
+                q.push(v);
+        }
+        num++;
+    }
+    if (num == n) return true; // 拓扑排序成功
+    else return false;
+}
+
+```
 
 ## 算术运算 
 
