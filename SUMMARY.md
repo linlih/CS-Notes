@@ -4,6 +4,7 @@
 
 ## 机器学习
 
+* [频率派和贝叶斯学派](ji-qi-xue-xi/pin-lv-pai-he-bei-ye-si-xue-pai.md)
 * [机器学习中的分类指标](ji-qi-xue-xi/ji-qi-xue-xi.md)
 * [数学基础](ji-qi-xue-xi/shu-xue-ji-chu.md)
 * [数据清洗](ji-qi-xue-xi/shu-ju-qing-xi.md)
@@ -20,6 +21,7 @@
 * [IoU](ji-qi-xue-xi/iou.md)
 * [EM算法](ji-qi-xue-xi/em-suan-fa.md)
 * [ML问题总结](ji-qi-xue-xi/ml-wen-ti-zong-jie.md)
+* [机器学习&深度学习学习资料汇总](ji-qi-xue-xi/ji-qi-xue-xi-shen-du-xue-xi-xue-xi-zi-liao-hui-zong.md)
 * [如何阅读论文](ji-qi-xue-xi/ru-he-yue-du-lun-wen.md)
 * [如何写好一篇论文](ji-qi-xue-xi/ru-he-xie-hao-yi-pian-lun-wen.md)
 
