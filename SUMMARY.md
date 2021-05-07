@@ -36,3 +36,7 @@
 * [代码汇总](yu-yan-suan-fa-xiang-guan/dai-ma-hui-zong.md)
 * [PAT手册](yu-yan-suan-fa-xiang-guan/pat-shou-ce.md)
 
+---
+
+* [MIT 6.828 OS课程](mit-6.828-os-ke-cheng.md)
+
