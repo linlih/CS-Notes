@@ -48,7 +48,13 @@ main(int argc, char *argv[])
 }
 ```
 
-然后在`Makefile` 文件的`UPROG` （第17行）部分加入`$U/_sleep\`然后执行make qemu，进入终端后输入`sleep 5`
+然后在`Makefile` 文件的`UPROG` （第17行）部分加入`$U/_sleep\`然后执行make qemu，进入终端后输入sleep 5即可验证该功能。
+
+同时也可以使用项目中的自动化测试脚本进行验证：
+
+```text
+./grade-lab-util sleep
+```
 
 
 
