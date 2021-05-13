@@ -394,6 +394,23 @@ void Union(int i, int j) {
 
 针对这两道题的解法都很巧妙，具体参考柳神的博客：[1143](https://blog.csdn.net/liuchuo/article/details/79618849)和[1151](https://blog.csdn.net/liuchuo/article/details/82560863)。
 
+补充得到树的root节点到叶子节点路径的方法：（下面这个查找到指定节点的路径）
+
+```cpp
+bool flag = false;
+void preorder(node *root, int x, vector<int> &path, vector<int> &ans) {
+    if (root == NULL||flag == true) return ;
+    path.push_back(root->val);
+    if (root->val == x) {
+        ans = path;
+        flag = true;
+    }
+    preorder(root->left, x, path, ans);
+    preorder(root->right, x, path, ans);
+    path.pop_back();
+}
+```
+
 ### 中缀&后缀表达式
 
 ```cpp
