@@ -41,7 +41,7 @@ print(imp.fit_transform(df))
 
 ## 时间特征的处理
 
-{% embed url="https://blog.csdn.net/qq\_38262266/article/details/100059962" %}
+{% embed url="https://blog.csdn.net/qq_38262266/article/details/100059962" %}
 
 {% embed url="https://towardsdatascience.com/machine-learning-with-datetime-feature-engineering-predicting-healthcare-appointment-no-shows-5e4ca3a85f96" %}
 
@@ -51,6 +51,4 @@ date_test = data[['Date']]
 date_test = pd.to_datetime(data['Date'][0], format='%Y-%m-%d',errors = 'coerce')
 date_test.year
 ```
-
-
 

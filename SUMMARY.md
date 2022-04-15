@@ -27,6 +27,7 @@
 
 ## 语言、算法相关
 
+* [背包问题 - 01背包&完全背包](yu-yan-suan-fa-xiang-guan/bei-bao-wen-ti-01-bei-bao-wan-quan-bei-bao.md)
 * [平衡二叉树AVL](yu-yan-suan-fa-xiang-guan/ping-heng-er-cha-shu-avl.md)
 * [红黑树RB-Tree](yu-yan-suan-fa-xiang-guan/hong-hei-shu-rbtree.md)
 * [STL容器](yu-yan-suan-fa-xiang-guan/untitled.md)
@@ -36,7 +37,6 @@
 * [代码汇总](yu-yan-suan-fa-xiang-guan/dai-ma-hui-zong.md)
 * [PAT手册](yu-yan-suan-fa-xiang-guan/pat-shou-ce.md)
 
----
+***
 
 * [MIT 6.828 OS课程](mit-6.828-os-ke-cheng.md)
-

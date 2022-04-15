@@ -25,7 +25,7 @@ sudo make install
 
 下面这个链接是官方提供的安装github上最新版本的：
 
-{% embed url="https://docs.opencv.org/3.1.0/d7/d9f/tutorial\_linux\_install.html" %}
+{% embed url="https://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html" %}
 
 Ubuntu上安装3.4版本
 
@@ -44,8 +44,6 @@ Ubuntu上安装3.4版本
 首先安装相应的库：sudo apt-get install libv4l-0 libv4l-dev
 
 然后重新编译opencv：编译选项中加入：cmake -DWITH\_LIBV4L=ON
-
-
 
 
 

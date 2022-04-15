@@ -14,7 +14,7 @@
 
 全概率公式：
 
-事件B的所有可能结果为：B1，B2，~Bn，并且两两之间相互独立。
+事件B的所有可能结果为：B1，B2，\~Bn，并且两两之间相互独立。
 
 $$
 P(A)=P(A \cap \Omega) = P[A\cap(B_1\cup B_2 ... \cup B_n)] \\=P(AB_1\cup AB_2...\cup AB_n) \\ = P(A B_1)+P(AB_2)+ ...+P(AB_n)\\=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+...P(A|B_n)P(B_n)
@@ -27,7 +27,5 @@ $$
 
 参考内容：
 
-{% embed url="https://blog.csdn.net/lsldd/article/details/84488678?utm\_medium=distribute.pc\_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel\_param&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel\_param" %}
-
-
+{% embed url="https://blog.csdn.net/lsldd/article/details/84488678?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param" %}
 

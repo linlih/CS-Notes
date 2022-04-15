@@ -6,7 +6,7 @@
 
 
 
-从数轴的$$x=a$$到$$x=b$$中间的所有值可以写成$$\lambda a+(1-\lambda)b$$，其中$$0\leq \lambda \leq 1$$。弦\(图中的蓝色直线\)上的点可以写成$$\lambda f(a) +(1-\lambda)f(b)$$，凸函数对应的值为$$f(\lambda a +(1-\lambda)b)$$，这样，凸函数的性质可以写成：
+从数轴的$$x=a$$到$$x=b$$中间的所有值可以写成$$\lambda a+(1-\lambda)b$$，其中$$0\leq \lambda \leq 1$$。弦(图中的蓝色直线)上的点可以写成$$\lambda f(a) +(1-\lambda)f(b)$$，凸函数对应的值为$$f(\lambda a +(1-\lambda)b)$$，这样，凸函数的性质可以写成：
 
 $$
 f(\lambda a +(1-\lambda)b)\leq\lambda f(a) +(1-\lambda)f(b)
@@ -30,7 +30,7 @@ $$
 f\Big(\int \boldsymbol xp( \boldsymbol x) d \boldsymbol x\Big) \leq \int f( \boldsymbol x)p( \boldsymbol x)d \boldsymbol x
 $$
 
-## Jocobian矩阵&Hessian矩阵
+## Jocobian矩阵\&Hessian矩阵
 
 Jocobian矩阵是由**一阶偏导数**构成的
 
@@ -60,57 +60,26 @@ Hessian矩阵是由**二阶偏导数**构成的
 
 ## 矩阵求导
 
-reference: [http://www.gatsby.ucl.ac.uk/teaching/courses/sntn/sntn-2017/resources/Matrix\_derivatives\_cribsheet.pdf](http://www.gatsby.ucl.ac.uk/teaching/courses/sntn/sntn-2017/resources/Matrix_derivatives_cribsheet.pdf)
+reference: [http://www.gatsby.ucl.ac.uk/teaching/courses/sntn/sntn-2017/resources/Matrix\_derivatives\_cribsheet.pdf](http://www.gatsby.ucl.ac.uk/teaching/courses/sntn/sntn-2017/resources/Matrix\_derivatives\_cribsheet.pdf)
 
-[https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
+[https://www.math.uwaterloo.ca/\~hwolkowi/matrixcookbook.pdf](https://www.math.uwaterloo.ca/\~hwolkowi/matrixcookbook.pdf)
 
 In these examples, b is a constant scalar, and B is a constant matrix:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">
-        <p>Scaler derivative</p>
-        <p></p>
-      </th>
-      <th style="text-align:left">
-        <p>Vector derivative</p>
-        <p></p>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">
-        <p></p>
-        <p>(&#x77E9;&#x9635;&#x662F;&#x5BF9;&#x79F0;&#x77E9;)</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| <p>Scaler derivative</p><p><span class="math"> f(x) \  \to \  \frac{\mathrm{d}{f}}{\mathrm{d}{x}} </span></p> | <p>Vector derivative</p><p><span class="math">  f(\mathbf{x}) \  \to \  \frac{\mathrm{d}{f}}{\mathrm{d}{\mathbf{x}}} </span></p>                    |
+| ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $$bx \ \to \ b$$                                                                                              | $$\mathbf{x}^T\mathbf{B} \ \to \ \mathbf{B}$$                                                                                                       |
+| $$bx \ \to \ b$$                                                                                              | $$\mathbf{x}^Tb \ \to \ b$$                                                                                                                         |
+| $$x^2 \ \to \ 2x$$                                                                                            | $$\mathbf{x}^T\mathbf{x} \ \to \ 2\mathbf{x}$$                                                                                                      |
+| $$bx^2 \ \to \ 2bx$$                                                                                          | <p><span class="math">\mathbf{x}^T\mathbf{B}\mathbf{x} \ \to \ 2\mathbf{B}\mathbf{x}</span></p><p>(矩阵<span class="math"> \mathbf{B}</span>是对称矩)</p> |
 
 
 
-## 矩阵的零空间\(nullspace\)
+## 矩阵的零空间(nullspace)
 
 矩阵A的零空间就Ax=0的解的集合。
 
-reference: [https://blog.csdn.net/tengweitw/article/details/40039373?utm\_medium=distribute.pc\_relevant.none-task-blog-BlogCommendFromBaidu-6&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-BlogCommendFromBaidu-6](https://blog.csdn.net/tengweitw/article/details/40039373?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-6)
-
-
+reference: [https://blog.csdn.net/tengweitw/article/details/40039373?utm\_medium=distribute.pc\_relevant.none-task-blog-BlogCommendFromBaidu-6\&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-BlogCommendFromBaidu-6](https://blog.csdn.net/tengweitw/article/details/40039373?depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-BlogCommendFromBaidu-6)
 
 
 
